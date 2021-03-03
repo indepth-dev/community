@@ -15,9 +15,9 @@ This operator combines all emitted inner streams and just as with plain merge co
 stream. In the diagram below you can see the H higher-order stream that produces two inner streams A and B. The mergeAll
 operator combines values from these two streams and then passes them through to the resulting sequence as they occur.
 
-## Diagram
-
 <a href="/">Test Link</a>
+
+## Diagram
 
 <video>
     <source src="merge-all.mp4" type="video/mp4">
