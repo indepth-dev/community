@@ -2,7 +2,7 @@
 title: mergeAll - RxJS Reference | indepth.dev 
 slug: reference/rxjs/operators/merge-all 
 tags:
-  - rxjs 
+  -rxjs 
   -javascript 
   -reactive programming
 ---
@@ -18,7 +18,7 @@ operator combines values from these two streams and then passes them through to 
 ## Diagram
 
 <video>
-    <source src="./merge-all.mp4" type="video/mp4">
+    <source src="merge-all.mp4" type="video/mp4">
 </video>
 
 
