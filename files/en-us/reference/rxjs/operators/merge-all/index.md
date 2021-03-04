@@ -17,12 +17,10 @@ operator combines values from these two streams and then passes them through to 
 
 <a href="/">Test Link</a>
 
-**[Link text](./test)**
-
 ## Diagram
 
 <video>
-    <source src="merge-all.mp4" type="video/mp4">
+    <source src="https://images.indepth.dev/references/rxjs/throttle-time-leading-false.mp4" type="video/mp4">
 </video>
 
 
