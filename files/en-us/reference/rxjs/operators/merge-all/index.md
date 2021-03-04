@@ -19,9 +19,7 @@ operator combines values from these two streams and then passes them through to 
 
 ## Diagram
 
-<video>
-    <source src="https://images.indepth.dev/references/rxjs/throttle-time-leading-false.mp4" type="video/mp4">
-</video>
+<video><source src="https://images.indepth.dev/references/rxjs/throttle-time-leading-false.mp4" type="video/mp4"></video>
 
 
 
