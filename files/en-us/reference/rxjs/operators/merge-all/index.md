@@ -17,6 +17,16 @@ operator combines values from these two streams and then passes them through to 
 
 <a href="/">Test Link</a>
 
+## Code
+
+```javascript
+const a = stream('a', 200, 3);
+const b = stream('b', 200, 3);
+const h = stream('h', 100, [a, b]);
+
+h.pipe(mergeAll()).subscribe(fullObserver(operator));
+```
+
 ## Diagram
 
 <video>
