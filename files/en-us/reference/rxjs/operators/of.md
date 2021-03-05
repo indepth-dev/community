@@ -1,0 +1,16 @@
+---
+title: of - RxJS Reference | indepth.dev
+slug: reference/rxjs/operators/of
+tags:
+    -rxjs 
+    -javascript 
+    -reactive programming
+---
+
+# Of
+
+## Diagram
+
+<video>
+    <source src="https://images.indepth.dev/references/rxjs/of.mp4" type="video/mp4">
+</video>
