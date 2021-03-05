@@ -1,6 +1,6 @@
 ---
 title: concat - RxJS Reference | indepth.dev
-slug: reference/rxjs/operators/Concat
+slug: reference/rxjs/operators/concat
 tags:
     -rxjs 
     -javascript 
