@@ -1,5 +1,5 @@
 ---
-title: concat-all - RxJS Reference | indepth.dev
+title: concatAll - RxJS Reference | indepth.dev
 slug: reference/rxjs/operators/concat-all
 tags:
     -rxjs 
