@@ -7,7 +7,7 @@ tags:
     -reactive programming
 ---
 
-# ThrottleTime
+# throttleTime
 
 ## Leading - true, Trailing - false
 

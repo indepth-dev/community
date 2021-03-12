@@ -7,7 +7,7 @@ tags:
     -reactive programming
 ---
 
-# Buffer
+# buffer
 
 ## Diagram
 

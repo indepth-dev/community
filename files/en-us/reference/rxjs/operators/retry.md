@@ -7,7 +7,7 @@ tags:
     -reactive programming
 ---
 
-# Retry
+# retry
 
 ## Diagram
 

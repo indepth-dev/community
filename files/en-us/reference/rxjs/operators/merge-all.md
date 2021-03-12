@@ -7,7 +7,7 @@ tags:
     -reactive programming
 ---
 
-# MergeAll
+# mergeAll
 
 ## Diagram
 

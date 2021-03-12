@@ -7,7 +7,7 @@ tags:
     -reactive programming
 ---
 
-# WithLatestFrom
+# withLatestFrom
 
 ## Diagram
 

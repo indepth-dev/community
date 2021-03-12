@@ -7,7 +7,7 @@ tags:
     -reactive programming
 ---
 
-# Concat
+# concat
 
 ## Diagram
 

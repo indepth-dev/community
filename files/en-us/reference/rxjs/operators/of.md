@@ -7,7 +7,7 @@ tags:
     -reactive programming
 ---
 
-# Of
+# of
 
 ## Diagram
 

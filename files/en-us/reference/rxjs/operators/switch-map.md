@@ -7,7 +7,7 @@ tags:
     -reactive programming
 ---
 
-# SwitchMap
+# switchMap
 
 ## Diagram
 

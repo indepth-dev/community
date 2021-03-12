@@ -7,7 +7,7 @@ tags:
     -reactive programming
 ---
 
-# ForkJoin
+# forkJoin
 
 ## Diagram
 

@@ -7,7 +7,7 @@ tags:
     -reactive programming
 ---
 
-# CatchError
+# catchError
 
 ## Diagram
 

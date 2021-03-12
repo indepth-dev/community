@@ -7,7 +7,7 @@ tags:
     -reactive programming
 ---
 
-# BufferWhen
+# bufferWhen
 
 ## Diagram
 

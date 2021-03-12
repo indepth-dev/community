@@ -7,7 +7,7 @@ tags:
     -reactive programming
 ---
 
-# Tap
+# tap
 
 ## Diagram
 

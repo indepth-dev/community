@@ -7,7 +7,7 @@ tags:
     -reactive programming
 ---
 
-# DistinctUntilChanged
+# distinctUntilChanged
 
 ## Diagram
 

@@ -7,7 +7,7 @@ tags:
     -reactive programming
 ---
 
-# Exhaust
+# exhaust
 
 ## Diagram
 

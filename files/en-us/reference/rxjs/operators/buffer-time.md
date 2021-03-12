@@ -7,7 +7,7 @@ tags:
     -reactive programming
 ---
 
-# BufferTime
+# bufferTime
 
 ## Diagram
 

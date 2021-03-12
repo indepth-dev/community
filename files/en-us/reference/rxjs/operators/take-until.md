@@ -7,7 +7,7 @@ tags:
     -reactive programming
 ---
 
-# TakeUntil
+# takeUntil
 
 ## Diagram
 

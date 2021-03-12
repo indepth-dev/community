@@ -7,7 +7,7 @@ tags:
     -reactive programming
 ---
 
-# TakeWhile
+# takeWhile
 
 ## Diagram
 

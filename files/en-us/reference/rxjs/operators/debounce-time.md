@@ -7,7 +7,7 @@ tags:
     -reactive programming
 ---
 
-# DebounceTime
+# debounceTime
 
 ## Diagram
 

@@ -7,7 +7,7 @@ tags:
     -reactive programming
 ---
 
-# Zip
+# zip
 
 ## Diagram
 

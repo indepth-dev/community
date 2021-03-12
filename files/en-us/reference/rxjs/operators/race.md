@@ -7,7 +7,7 @@ tags:
     -reactive programming
 ---
 
-# Race
+# race
 
 ## Diagram
 

@@ -7,7 +7,7 @@ tags:
     -reactive programming
 ---
 
-# SwitchAll
+# switchAll
 
 ## Diagram
 

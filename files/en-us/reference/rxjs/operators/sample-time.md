@@ -7,7 +7,7 @@ tags:
     -reactive programming
 ---
 
-# SampleTime
+# sampleTime
 
 ## Diagram
 

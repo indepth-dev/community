@@ -7,7 +7,7 @@ tags:
     -reactive programming
 ---
 
-# ConcatMap
+# concatMap
 
 ## Diagram
 

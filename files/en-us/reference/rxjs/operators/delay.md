@@ -7,7 +7,7 @@ tags:
     -reactive programming
 ---
 
-# Delay
+# delay
 
 ## Diagram
 

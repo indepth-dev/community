@@ -7,7 +7,7 @@ tags:
     -reactive programming
 ---
 
-# CombineLatest
+# combineLatest
 
 ## Diagram
 

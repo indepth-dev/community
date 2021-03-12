@@ -7,7 +7,7 @@ tags:
     -reactive programming
 ---
 
-# RetryWhen
+# retryWhen
 
 ## Diagram
 
