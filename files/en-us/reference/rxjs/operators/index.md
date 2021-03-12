@@ -7,7 +7,7 @@ slug: reference/rxjs/operators
 
 RxJS library implements the [Observable primitive](https://indepth.dev/reference/rxjs) and adds operators to enable more efficient workflows when dealing with streams of asynchronous events. While Observable is the foundation, operators allow composing and transforming streams of data in a declarative manner.
 
-Operators are chained together using pipe method that is available on Observable. Here’s a basic example that transforms and filters a stream of mouse clicks to only notify a subscriber if the click happens inside an element:
+Operators are chained together using `pipe` method that is available on Observable. Here’s a basic example that transforms and filters a stream of mouse clicks to only notify a subscriber if the click happens inside an element:
 
 ```javascript
 const rect = document.querySelector('.rect').getClientRects();
@@ -31,12 +31,17 @@ fromEvent(document, 'click').pipe(
 There are many different categories of operators. Here are some of the most common operators placed under their respective categories:
 
 - Creation
-  - of, from, fromEvent
+   - [of](https://indepth.dev/reference/rxjs/operators/of), [from](https://indepth.dev/reference/rxjs/operators/from), fromEvent
 - Filtering
+   - [filter](https://indepth.dev/reference/rxjs/operators/filter), [take](https://indepth.dev/reference/rxjs/operators/take), [debounceTime](https://indepth.dev/reference/rxjs/operators/debounce-time)
 - Transformation
+   - [map](https://indepth.dev/reference/rxjs/operators/map), [switchMap](https://indepth.dev/reference/rxjs/operators/switch-map), scan
 - Combination
+   - [concatAll](https://indepth.dev/reference/rxjs/operators/concat-all), [withLatestFrom](https://indepth.dev/reference/rxjs/operators/with-latest-from), [zip](https://indepth.dev/reference/rxjs/operators/zip)
 - Error handling
+   - [catchError](https://indepth.dev/reference/rxjs/operators/catch-error), [retry](https://indepth.dev/reference/rxjs/operators/retry), [retryWhen](https://indepth.dev/reference/rxjs/operators/retry-when)
 - Multicasting
+   - publish, multicast, share
 
 An operator is a function that takes a source observable, creates a new observable inside and connects both observables through a subscription. This new observable is returned from the operator function and passed down an operators chain. The signature for an operator function looks like this:
 
