@@ -3,7 +3,7 @@ title: RxJS Reference | indepth.dev
 slug: reference/rxjs/operators
 ---
 
-# What is RxJS and Observable???
+# What is RxJS and Observable?
 
 Most web applications today are driven by a range of asynchronous events. User clicks on a button, the application may react by sending a network request. The network request comes back, the application may react by updating the DOM. The reactive pattern like this is something web developers deal with everyday.
 
