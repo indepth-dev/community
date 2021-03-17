@@ -48,9 +48,7 @@ fromEvent(inputElement, 'input')
 
 ## Playground
 
-<span>
-    <iframe src="https://stackblitz.com/edit/indepth-rxjs-debouncetime?embed=1&file=index.ts"></iframe>
-</span>
+<iframe src="https://stackblitz.com/edit/indepth-rxjs-debouncetime?embed=1&file=index.ts"></iframe>
 
 ## Additional resources
 
