@@ -9,7 +9,6 @@ tags:
 
 # debounce
 
-
 ## diagram
 
 <video>
