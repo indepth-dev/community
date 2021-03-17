@@ -48,17 +48,26 @@ fromEvent(inputElement, 'input')
 
 ## Playground
 
-<iframe src="https://stackblitz.com/edit/indepth-rxjs-debouncetime?embed=1&file=index.ts" height="400" width="745"></iframe>
+<figure>
+    <iframe src="https://stackblitz.com/edit/indepth-rxjs-debouncetime?embed=1&file=index.ts"></iframe>
+</figure>
 
 ## Additional resources
 
 [Official documentation](https://rxjs-dev.firebaseapp.com/api/operators/debounceTime)
+
 [How to debounce an input while skipping the first entry](https://indepth.dev/posts/1444/how-to-debounce-an-input-while-skipping-the-first-entry)
+
 [Rx.js Operators, Part II](https://indepth.dev/posts/1445/rx-js-operators-part-ii)
 
 ## See also
+
 [auditTime](https://indepth.dev/reference/rxjs/operators/audit-time)
+
 [sampleTime](https://indepth.dev/reference/rxjs/operators/sample-time)
+
 [throttleTime](https://indepth.dev/reference/rxjs/operators/throttle-time)
+
 [delay](https://indepth.dev/reference/rxjs/operators/delay)
+
 [debounce](https://indepth.dev/reference/rxjs/operators/debounce)
