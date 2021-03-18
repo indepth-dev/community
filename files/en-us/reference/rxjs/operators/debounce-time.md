@@ -58,7 +58,7 @@ fromEvent(inputElement, 'input')
 
 [Rx.js Operators, Part II](https://indepth.dev/posts/1445/rx-js-operators-part-ii)
 
-## See also
+## See alsoo
 
 [debounce](https://indepth.dev/reference/rxjs/operators/debounce)
 
