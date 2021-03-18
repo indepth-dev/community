@@ -33,7 +33,7 @@ This operator is mostly used for events that can be triggered tens or even hundr
 
 Common scenarios for a debounce are resize, scroll, and keyup/keydown events. In addition, you should consider wrapping any interaction that triggers excessive calculations or API calls with a debounce.
 
-Here’s an example of using `debounceTime` on an input:
+Here’s an example of using `debounceTime` on an input::
 
 ```javascript
 const inputElement = document.createElement('input');
