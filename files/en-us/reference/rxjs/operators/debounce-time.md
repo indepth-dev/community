@@ -21,6 +21,12 @@ The operator works in the following way:
 
 By default it uses `setInterval` [through AsyncScheduler](https://github.com/ReactiveX/rxjs/blob/9b708613cb7687647dc43c5e15b821e17ccc23ef/src/internal/operators/debounceTime.ts#L64) under the hood for scheduling.
 
+The following diagram demonstrates this sequence of steps:
+
+<video>
+    <source src="https://images.indepth.dev/references/rxjs/debounce-time.mp4" type="video/mp4">
+</video>
+
 ## Usage
 
 This operator is mostly used for events that can be triggered tens or even hundreds of times per second. The most common examples are DOM events such as scrolling, mouse movement, and keypress. When using `debouceTime` you only care about the final state. For example, current scroll position when a user stops scrolling, or a final text in a searchbox after a user stops typing in characters. In effect, using the operator allows grouping multiple sequential events into a single one and hence execute the callback just once. This can greatly improve performance.
@@ -40,12 +46,6 @@ fromEvent(inputElement, 'input')
    ).subscribe(val => console.log(val));
 ```
 
-## Diagram
-
-<video>
-    <source src="https://images.indepth.dev/references/rxjs/debounce-time.mp4" type="video/mp4">
-</video>
-
 ## Playground
 
 <iframe src="https://stackblitz.com/edit/indepth-rxjs-debouncetime?embed=1&file=index.ts"></iframe>
@@ -53,19 +53,13 @@ fromEvent(inputElement, 'input')
 ## Additional resources
 
 [Official documentation](https://rxjs-dev.firebaseapp.com/api/operators/debounceTime)
-
 [How to debounce an input while skipping the first entry](https://indepth.dev/posts/1444/how-to-debounce-an-input-while-skipping-the-first-entry)
-
 [Rx.js Operators, Part II](https://indepth.dev/posts/1445/rx-js-operators-part-ii)
 
 ## See also
 
-[auditTime](https://indepth.dev/reference/rxjs/operators/audit-time)
-
-[sampleTime](https://indepth.dev/reference/rxjs/operators/sample-time)
-
-[throttleTime](https://indepth.dev/reference/rxjs/operators/throttle-time)
-
-[delay](https://indepth.dev/reference/rxjs/operators/delay)
-
 [debounce](https://indepth.dev/reference/rxjs/operators/debounce)
+[auditTime](https://indepth.dev/reference/rxjs/operators/audit-time)
+[sampleTime](https://indepth.dev/reference/rxjs/operators/sample-time)
+[throttleTime](https://indepth.dev/reference/rxjs/operators/throttle-time)
+[delay](https://indepth.dev/reference/rxjs/operators/delay)
