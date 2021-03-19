@@ -1,8 +1,7 @@
 ---
 title: debounce - RxJS Reference | indepth.dev
 slug: reference/rxjs/operators/debounce
-tags:
-    -rxjs, javascript, reactive programming  
+tags: rxjs, javascript, reactive programming  
 ---
 
 # debounce
