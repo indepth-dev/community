@@ -1,15 +1,10 @@
 ---
 title: debounceTime - RxJS Reference | indepth.dev
 slug: reference/rxjs/operators/debounce-time
-tags:
-    -rxjs 
-    -javascript 
-    -reactive programming
+tags: rxjs, javascript, reactive programming
 ---
 
 # debounceTime
-
-## About
 
 `debounceTime` delays the values emitted by a source for the given due time. If within this time a new value arrives, the previous pending value is dropped and the timer is reset. In this way `debounceTime` keeps track of most recent value and emits that most recent value when the given due time is passed.
 
@@ -52,20 +47,14 @@ fromEvent(inputElement, 'input')
 
 ## Additional resources
 
-[Official documentation](https://rxjs-dev.firebaseapp.com/api/operators/debounceTime)
-
-[How to debounce an input while skipping the first entry](https://indepth.dev/posts/1444/how-to-debounce-an-input-while-skipping-the-first-entry)
-
-[Rx.js Operators, Part II](https://indepth.dev/posts/1445/rx-js-operators-part-ii)
+- [Official documentation](https://rxjs-dev.firebaseapp.com/api/operators/debounceTime)
+- [How to debounce an input while skipping the first entry](https://indepth.dev/posts/1444/how-to-debounce-an-input-while-skipping-the-first-entry)
+- [Rx.js Operators, Part II](https://indepth.dev/posts/1445/rx-js-operators-part-ii)
 
 ## See alsoo
 
-[debounce](https://indepth.dev/reference/rxjs/operators/debounce)
-
-[auditTime](https://indepth.dev/reference/rxjs/operators/audit-time)
-
-[sampleTime](https://indepth.dev/reference/rxjs/operators/sample-time)
-
-[throttleTime](https://indepth.dev/reference/rxjs/operators/throttle-time)
-
-[delay](https://indepth.dev/reference/rxjs/operators/delay)
+- [debounce](https://indepth.dev/reference/rxjs/operators/debounce)
+- [auditTime](https://indepth.dev/reference/rxjs/operators/audit-time)
+- [sampleTime](https://indepth.dev/reference/rxjs/operators/sample-time)
+- [throttleTime](https://indepth.dev/reference/rxjs/operators/throttle-time)
+- [delay](https://indepth.dev/reference/rxjs/operators/delay)
