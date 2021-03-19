@@ -2,14 +2,10 @@
 title: debounce - RxJS Reference | indepth.dev
 slug: reference/rxjs/operators/debounce
 tags:
-    -rxjs 
-    -javascript 
-    -reactive programming
+    -rxjs, javascript, reactive programming  
 ---
 
 # debounce
-
-## About 
 
 `debounce` delays the values emitted by a source until the duration Observable emits a value or completes. If within this time a new value arrives, the previous pending value is dropped and the duration Obsevarbale is re-subscribed. In this way `debounce` keeps track of the most recent value and emits that most recent value using the duration observable as an indicator of where to do that.
 
@@ -51,14 +47,14 @@ fromEvent(inputElement, 'input')
 
 ## Additional resources
 
-[Official documentation](https://rxjs-dev.firebaseapp.com/api/operators/debounce)
-[How to debounce an input while skipping the first entry](https://indepth.dev/posts/1444/how-to-debounce-an-input-while-skipping-the-first-entry)
-[Rx.js Operators, Part II](https://indepth.dev/posts/1445/rx-js-operators-part-ii)
+- [Official documentation](https://rxjs-dev.firebaseapp.com/api/operators/debounce)
+- [How to debounce an input while skipping the first entry](https://indepth.dev/posts/1444/how-to-debounce-an-input-while-skipping-the-first-entry)
+- [Rx.js Operators, Part II](https://indepth.dev/posts/1445/rx-js-operators-part-ii)
 
 ## See also
 
-[debounceTime](https://indepth.dev/reference/rxjs/operators/debounce-time)
-[auditTime](https://indepth.dev/reference/rxjs/operators/audit-time)
-[sampleTime](https://indepth.dev/reference/rxjs/operators/sample-time)
-[throttleTime](https://indepth.dev/reference/rxjs/operators/throttle-time)
-[delay](https://indepth.dev/reference/rxjs/operators/delay)
+- [debounceTime](https://indepth.dev/reference/rxjs/operators/debounce-time)
+- [auditTime](https://indepth.dev/reference/rxjs/operators/audit-time)
+- [sampleTime](https://indepth.dev/reference/rxjs/operators/sample-time)
+- [throttleTime](https://indepth.dev/reference/rxjs/operators/throttle-time)
+- [delay](https://indepth.dev/reference/rxjs/operators/delay)
