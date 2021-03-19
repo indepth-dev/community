@@ -48,7 +48,7 @@ The following diagram demonstrates this sequence of steps:
     <source src="https://images.indepth.dev/references/rxjs/throttle-time-leading-false.mp4" type="video/mp4">
 </video>
 
-By default the operator uses `setInterval` through AsyncScheduler under the hood for scheduling.
+By default the operator uses `setInterval` [through AsyncScheduler under the hood](https://github.com/ReactiveX/rxjs/blob/9b708613cb7687647dc43c5e15b821e17ccc23ef/src/internal/operators/debounceTime.ts#L64) for scheduling.
 
 ## Usage
 This operator is mostly used for events that can be triggered tens or even hundreds of times per second. The most common examples are DOM events such as scrolling, resizing, mouse movements, and keypress. 
