@@ -51,7 +51,7 @@ fromEvent(inputElement, 'input')
 - [How to debounce an input while skipping the first entry](https://indepth.dev/posts/1444/how-to-debounce-an-input-while-skipping-the-first-entry)
 - [Rx.js Operators, Part II](https://indepth.dev/posts/1445/rx-js-operators-part-ii)
 
-## See alsoo
+## See also
 
 - [debounce](https://indepth.dev/reference/rxjs/operators/debounce)
 - [auditTime](https://indepth.dev/reference/rxjs/operators/audit-time)
