@@ -6,7 +6,7 @@ tags: rxjs, javascript, reactive programming
 
 # throttleTime
 
-`throttleTime` delays the values emitted by a source for the given due time. Similarly to debounceTime, this operator can be used to control the rate with which the values are emitted to an observer. Unlike `debounceTime` though, `throttleTime` guarantees the values will be emitted regurarly, but not more often than the configured interval.
+`throttleTime` delays the values emitted by a source for the given due time. Similarly to [debounceTime](https://indepth.dev/reference/rxjs/operators/debounce-time), this operator can be used to control the rate with which the values are emitted to an observer. Unlike `debounceTime` though, `throttleTime` guarantees the values will be emitted regurarly, but not more often than the configured interval.
 
 This operator takes an optional configuration parameter that can change the behavior of the operator: `{leading: boolean, trailing: boolean}`. The default settings are `{leading: true, trailing: false}`.
 
