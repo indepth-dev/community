@@ -17,6 +17,7 @@ The operator works in the following way:
 - once the interval ends, emit the value to the observer
 - if the source observable completes before the interval ends, discard the value
 
+
 The following diagram demonstrates this sequence of steps:
 
 <video>
