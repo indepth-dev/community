@@ -17,14 +17,13 @@ The operator works in the following way:
 - once the interval ends, emit the value to the observer
 - if the source observable completes before the interval ends, discard the value
 
+By default the operator uses `setInterval` [through AsyncScheduler under the hood](https://github.com/ReactiveX/rxjs/blob/9b708613cb7687647dc43c5e15b821e17ccc23ef/src/internal/operators/debounceTime.ts#L64) for scheduling.
 
 The following diagram demonstrates this sequence of steps:
 
 <video>
     <source src="https://images.indepth.dev/references/rxjs/auditTime.mp4" type="video/mp4">
 </video>
-
-By default the operator uses `setInterval` [through AsyncScheduler under the hood](https://github.com/ReactiveX/rxjs/blob/9b708613cb7687647dc43c5e15b821e17ccc23ef/src/internal/operators/debounceTime.ts#L64) for scheduling.
 
 ## Usage
 When you are interested in ignoring values from a source observable for a given amount of time, you can use auditTime. It is mostly used for events that can be triggered tens or even hundreds of times per second. The most common examples are DOM events such as scrolling, resizing, mouse movements, and keypress. 
