@@ -12,10 +12,11 @@ As values from any combined sequence are produced, those values are emitted as p
 Use this operator if you’re not concerned with the order of emissions and is simply interested in all values coming out from multiple combined streams as if they were produced by one stream.
 
 The operator works in the following way:
-1. Subscribe to all source observables
-2. When a new value arrives from a source observable, pass it down to an observer
-3. Only after all source observables complete, send the complete notification to the observer.
-4. If any of the source observables throws an error, send the error notification to the observer.
+1. Subscribe to the source observable
+2. When a new inner observable is emitted from the source observable, subscribe to it
+3. When a new value arrives from an inner souce observable, pass it down to an observer
+4. Only after all inner source observables complete, send the complete notification to the observer.
+5. If any of the inner source observables throws an error, send the error notification to the observer.
 
 In the diagram below you can see the `H` higher-order stream that produces two inner streams `A` and `B`. The `mergeAll` operator combines values from these two streams and then passes them through to the resulting sequence as they occur:
 
