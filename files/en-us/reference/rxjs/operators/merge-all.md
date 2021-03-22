@@ -5,14 +5,14 @@ tags: rxjs, javascript, reactive programming
 ---
 
 # mergeAll
-`mergeAll` combines a number of inner observable streams and concurrently emits all values from every input stream. It’s similar to [merge](https://indepth.dev/reference/rxjs/operators/merge), but instead of taking a set of streams directly as input, it takes an observable source that produces other streams (observables). Those streams are often referred to as **inner** streams.
+`mergeAll` combines a number of inner observable streams and concurrently emits all values from every input stream. It’s similar to [merge](https://indepth.dev/reference/rxjs/operators/merge), but instead of taking a set of streams directly as input, it takes an observable source that produces other streams (observables). Those streams are often referred to as **inner** stream (observable) and the stream that emits them is known as **higher-order observable**.
 
 As values from any combined sequence are produced, those values are emitted as part of the resulting sequence. Such process is often referred to as **flattening** in documentation.
 
 Use this operator if you’re not concerned with the order of emissions and is simply interested in all values coming out from multiple combined streams as if they were produced by one stream.
 
 The operator works in the following way:
-1. Subscribe to the source observable
+1. Subscribe to the higher-order source observable
 2. When a new inner observable is emitted from the source observable, subscribe to it
 3. When a new value arrives from an inner souce observable, pass it down to an observer
 4. Only after all inner source observables complete, send the complete notification to the observer.
