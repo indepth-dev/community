@@ -12,5 +12,5 @@ tags:
 ## Diagram
 
 <video>
-    <source src="https://images.indepth.dev/references/rxjs/tap.mp4" type="video/mp4">
+    <source src="https://images.indepth.dev/references/rxjs/operators/tap.mp4" type="video/mp4">
 </video>

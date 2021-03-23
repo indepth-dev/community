@@ -8,5 +8,5 @@ slug: reference/rxjs/subjects/async-subject
 ## Diagram
 
 <video>
-    <source src="https://images.indepth.dev/references/rxjs/Subject/asyncSubject.mp4">
+    <source src="https://images.indepth.dev/references/rxjs/subjects/async-subject.mp4">
 </video>

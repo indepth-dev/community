@@ -19,7 +19,7 @@ By default it uses `setInterval` [through AsyncScheduler](https://github.com/Rea
 The following diagram demonstrates this sequence of steps:
 
 <video>
-    <source src="https://images.indepth.dev/references/rxjs/debounce-time.mp4" type="video/mp4">
+    <source src="https://images.indepth.dev/references/rxjs/operators/debounce-time.mp4" type="video/mp4">
 </video>
 
 ## Usage

@@ -19,7 +19,7 @@ The operator works in the following way:
 In the diagram below you can see the merge operator combining two streams `A` and `B` each producing 3 items and the values falling through to the resulting sequence as they occur:
 
 <video>
-    <source src="https://images.indepth.dev/references/rxjs/merge.mp4" type="video/mp4">
+    <source src="https://images.indepth.dev/references/rxjs/operators/merge.mp4" type="video/mp4">
 </video>
 
 ## Usage

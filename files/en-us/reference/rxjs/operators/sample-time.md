@@ -24,7 +24,7 @@ By default the operator uses `setInterval` through AsyncScheduler under the hood
 The following diagram demonstrates this sequence of steps:
 
 <video>
-    <source src="https://images.indepth.dev/references/rxjs/sampleTime.mp4" type="video/mp4">
+    <source src="https://images.indepth.dev/references/rxjs/operators/sample-time.mp4" type="video/mp4">
 </video>
 
 ## Usage

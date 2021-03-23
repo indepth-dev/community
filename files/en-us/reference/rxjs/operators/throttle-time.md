@@ -19,7 +19,7 @@ For the default configuration `{leading: true, trailing: false}` the operator wo
 The following diagram demonstrates this sequence of steps:
 
 <video>
-    <source src="https://images.indepth.dev/references/rxjs/throttle-time-trailing-false.mp4" type="video/mp4">
+    <source src="https://images.indepth.dev/references/rxjs/operators/throttle-time-trailing-false.mp4" type="video/mp4">
 </video>
 
 For the configuration `{leading: true, trailing: true}` the operator works in the following way:
@@ -32,7 +32,7 @@ For the configuration `{leading: true, trailing: true}` the operator works in th
 The following diagram demonstrates this sequence of steps:
 
 <video>
-    <source src="https://images.indepth.dev/references/rxjs/throttle-time-true.mp4" type="video/mp4">
+    <source src="https://images.indepth.dev/references/rxjs/operators/throttle-time-true.mp4" type="video/mp4">
 </video>
 
 For the configuration `{leading: false, trailing: true}` the operator works in the following way:
@@ -45,7 +45,7 @@ For the configuration `{leading: false, trailing: true}` the operator works in t
 The following diagram demonstrates this sequence of steps:
 
 <video>
-    <source src="https://images.indepth.dev/references/rxjs/throttle-time-leading-false.mp4" type="video/mp4">
+    <source src="https://images.indepth.dev/references/rxjs/operators/throttle-time-leading-false.mp4" type="video/mp4">
 </video>
 
 By default the operator uses `setInterval` [through AsyncScheduler under the hood](https://github.com/ReactiveX/rxjs/blob/9b708613cb7687647dc43c5e15b821e17ccc23ef/src/internal/operators/debounceTime.ts#L64) for scheduling.

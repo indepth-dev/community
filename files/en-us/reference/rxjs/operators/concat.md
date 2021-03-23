@@ -19,7 +19,7 @@ Please note that `concat` will never complete if some of the input streams donâ€
 In the diagram below you can see the concat operator combining two streams `A` and `B` each producing 3 items and the values falling through to the resulting sequence first from the `A` and then from the `B`:
 
 <video>
-    <source src="https://images.indepth.dev/references/rxjs/concat.mp4" type="video/mp4">
+    <source src="https://images.indepth.dev/references/rxjs/operators/concat.mp4" type="video/mp4">
 </video>
 
 ## Usage

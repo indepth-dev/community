@@ -8,5 +8,5 @@ slug: reference/rxjs/subjects/replay-subject
 ## Diagram
 
 <video>
-    <source src="https://images.indepth.dev/references/rxjs/Subject/replaysubject-.mp4">
+    <source src="https://images.indepth.dev/references/rxjs/subjects/replay-subject.mp4">
 </video>

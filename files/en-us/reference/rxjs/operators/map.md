@@ -12,7 +12,7 @@ tags:
 ## Diagram
 
 <video>
-    <source src="https://images.indepth.dev/references/rxjs/map.mp4" type="video/mp4">
+    <source src="https://images.indepth.dev/references/rxjs/operators/map.mp4" type="video/mp4">
 </video>
 
 ## Code

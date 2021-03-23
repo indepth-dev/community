@@ -12,5 +12,5 @@ tags:
 ## Diagram
 
 <video>
-    <source src="https://images.indepth.dev/references/rxjs/replaySubject.mp4" type="video/mp4">
+    <source src="https://images.indepth.dev/references/rxjs/operators/replay-subject.mp4" type="video/mp4">
 </video>

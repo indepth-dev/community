@@ -18,7 +18,7 @@ The operator works in the following way:
 The following diagram demonstrates this sequence of steps:
 
 <video>
-    <source src="https://images.indepth.dev/references/rxjs/debounce.mp4" type="video/mp4">
+    <source src="https://images.indepth.dev/references/rxjs/operators/debounce.mp4" type="video/mp4">
 </video>
 
 ## Usage

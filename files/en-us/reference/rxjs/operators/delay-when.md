@@ -12,7 +12,7 @@ tags:
 ## Diagram
 
 <video>
-    <source src="https://images.indepth.dev/references/rxjs/delay-when.mp4" type="video/mp4">
+    <source src="https://images.indepth.dev/references/rxjs/operators/delay-when.mp4" type="video/mp4">
 </video>
 
 ## Code

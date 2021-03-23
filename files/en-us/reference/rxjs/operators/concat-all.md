@@ -27,7 +27,7 @@ In the diagram below you can see the `H` higher-order stream that produces two i
 The following diagram demonstrates this behavior:
 
 <video>
-    <source src="https://images.indepth.dev/references/rxjs/concat-all.mp4" type="video/mp4">
+    <source src="https://images.indepth.dev/references/rxjs/operators/concat-all.mp4" type="video/mp4">
 </video>
 
 ## Usage

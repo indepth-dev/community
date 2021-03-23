@@ -57,7 +57,7 @@ A standard Subject with no replay behaviour and no initial value. New subscriber
 Here’s a diagram that demonstrates the behavior:
 
 <video>
-    <source src="https://images.indepth.dev/references/rxjs/Subject/subject_1.mp4">
+    <source src="https://images.indepth.dev/references/rxjs/subjects/subjects.mp4">
 </video>
 
 ### Async Subject

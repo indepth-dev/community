@@ -12,5 +12,5 @@ tags:
 ## Diagram
 
 <video>
-    <source src="https://images.indepth.dev/references/rxjs/combine-latest.mp4" type="video/mp4">
+    <source src="https://images.indepth.dev/references/rxjs/operators/combine-latest.mp4" type="video/mp4">
 </video>

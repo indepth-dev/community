@@ -21,7 +21,7 @@ The operator works in the following way:
 In the diagram below you can see the `H` higher-order stream that produces two inner streams `A` and `B`. The `mergeAll` operator combines values from these two streams and then passes them through to the resulting sequence as they occur:
 
 <video>
-    <source src="https://images.indepth.dev/references/rxjs/merge-all.mp4" type="video/mp4">
+    <source src="https://images.indepth.dev/references/rxjs/operators/merge-all.mp4" type="video/mp4">
 </video>
 
 ## Usage
