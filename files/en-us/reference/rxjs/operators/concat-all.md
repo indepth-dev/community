@@ -20,7 +20,7 @@ The operator works in the following way:
 6. Only after all source observables complete, send the complete notification to the observer.
 7. If any of the inner source observables throws an error, send the error notification to the observer.
 
-Please note that `concat` will never complete if some of the input streams don’t complete. This also means that some streams will never be subscribed to.
+Please note that `concatAll` will never complete if some of the input streams don’t complete. This also means that some streams will never be subscribed to.
 
 In the diagram below you can see the `H` higher-order stream that produces two inner streams `A` and `B`. The `concatAll` operator combines values from these two streams and then passes them through to the resulting sequence as they occur. As opposed to [mergeAll](https://indepth.dev/reference/rxjs/operators/merge-all), it subscribes to those inner observables sequentially. First it subscribes to `A`, waits until it’s completed, and only then subscribes to `B`.
 
