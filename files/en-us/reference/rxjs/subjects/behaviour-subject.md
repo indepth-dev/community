@@ -8,5 +8,5 @@ slug: reference/rxjs/subjects/behaviour-subject
 ## Diagram
 
 <video>
-    <source src="https://images.indepth.dev/references/rxjs/subject-s/behavior-subject.mp4">
+    <source src="https://images.indepth.dev/references/rxjs/subjects/behavior-subject.mp4">
 </video>
