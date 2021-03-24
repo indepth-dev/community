@@ -38,6 +38,10 @@ And the editable demo:
 
 <iframe src="https://stackblitz.com/edit/indepth-rxjs-fork-join?embed=1&file=index.ts"></iframe>
 
+## Usage
+
+This operator can be used when there's a group of streams and only care about the final emitted value of each. Often such sequences have only a single emission. For example, you may want to make multiples network requests and only want to take an action when a response has been received for all of them. It is in some way similar to Promise.all functionality. However, if you have a stream that emits more than one item, those items will be ignored except for the last value.
+
 ## Additional resources
 
 - [Official documentation](https://rxjs-dev.firebaseapp.com/api/operators/forkJoin)
