@@ -12,5 +12,5 @@ tags:
 ## Diagram
 
 <video>
-    <source src="https://images.indepth.dev/references/rxjs/buffer-time.mp4">
+    <source src="https://images.indepth.dev/references/rxjs/operators/buffer-time.mp4">
 </video>
