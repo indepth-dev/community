@@ -22,7 +22,7 @@ By default the operator uses `setInterval` [through AsyncScheduler under the hoo
 The following diagram demonstrates this sequence of steps:
 
 <video>
-    <source src="https://images.indepth.dev/references/rxjs/auditTime.mp4" type="video/mp4">
+    <source src="https://images.indepth.dev/references/rxjs/operators/audit-time.mp4" type="video/mp4">
 </video>
 
 ## Usage
