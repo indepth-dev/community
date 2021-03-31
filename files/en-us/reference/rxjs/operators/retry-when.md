@@ -18,7 +18,6 @@ The function is expected to return an observable that will be used as a guide to
 4. When a new value arrives from the guiding observable, re-subscribe to the original source
 5. If  the guiding observable completes or throws an error, send the complete or error notification to the observer
 6. Once the source observable completes, send the complete notification to the observer
-7. If the source observable throws an error, send the error notification to the observer
 
 The following diagram demonstrates this sequence of steps:
 
