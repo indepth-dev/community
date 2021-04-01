@@ -8,7 +8,7 @@ tags: rxjs, javascript, reactive programming
 
 `distinctUntilChanged` emits all items emitted by the source observable that are distinct by comparison from the previous item. By default, it uses simple comparison operator that doesn’t check any keys, so object references must match for an object to be considered the same.
 
-The operator takes an optional comparison function that will be called to test if an item is distinct from the previous item. The function receives the current and the previous values as parameters and must return a boolean value that determines whether or not that value should be emitted to the observer or be ignored. Since it’s a comparison function, if it returns true, it means that values are the same and hence the value is ignored, otherwise it’s send to the observer.
+The operator takes an optional comparison function that will be called to test if an item is distinct from the previous item. The function receives the current and the previous values as parameters and must return a boolean value that determines whether or not that value should be emitted to the observer or be ignored. Since it’s a comparison function, if it returns true, it means that values are the same and hence the value is ignored, otherwise it’s sent to the observer.
 
 Please note that this operator doesn’t select unique values, it simply prevents two equal values in a row. It means, that if you have a sequence `{1,2,3,2}` with the number `2` appearing two times, it will still end up in the resulting output twice because those numbers do not follow each other. 
 
