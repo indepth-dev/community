@@ -41,7 +41,7 @@ fromEvent(input, 'input').pipe(
 ).subscribe((value) => console.log(value));
 ```
 
-Using `debounceTime(1000)` means we only receive a value when the user stopped typing for 1 second. However, during this 1 second the user can write some characters but then erase them. For example, a user types “ab”, then adds “c”, then removes it “c” within the 1s interval, but you’ll still both “ab” in the resulting set `{ab, ab}`.
+Using `debounceTime(1000)` means we only receive a value when the user stopped typing for 1 second. However, during this 1 second the user can write some characters but then erase them. For example, a user types `ab`, then adds `c`, then removes it `c` within the 1s interval, but you’ll still both `ab` in the resulting set `{ab, ab}`.
 
 By simply adding `distinctUntilChanged` we can prevent that:
 
@@ -53,7 +53,7 @@ fromEvent(input, 'input').pipe(
 ).subscribe((value) => console.log(value));
 ```
 
-The operator prevents emission of the second “ab” since it’s the same as the last emission.
+The operator prevents emission of the second `ab` since it’s the same as the last emission.
 
 
 ## Playground
