@@ -66,7 +66,7 @@ function selectFromStore(selector) {
 
 ## Playground
 
-<iframe src="https://stackblitz.com/edit/indepth-rxjs-behaviour-subject?embed=1&file=index.ts"></iframe>
+<iframe src="https://stackblitz.com/edit/indepth-rxjs-behavior-subject?embed=1&file=index.ts"></iframe>
 
 ## Additional resources
 
