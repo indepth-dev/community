@@ -74,7 +74,7 @@ When an observer subscribes to a `BehaviorSubject`, it begins by emitting the it
 
 However, if the source Observable terminates with an error, the BehaviorSubject will not emit any items to subsequent observers, but will simply pass along the error notification from the source Observable.
 
-See more [here](https://indepth.dev/reference/rxjs/subjects/behavior-subject).
+See more [here](https://indepth.dev/reference/rxjs/subjects/behaviour-subject).
 
 ### Replay Subject
 
