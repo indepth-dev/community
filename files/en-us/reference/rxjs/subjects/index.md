@@ -68,13 +68,13 @@ It will also emit this same final value to any subsequent observers. However, if
 
 See more [here](https://indepth.dev/reference/rxjs/subjects/async-subject).
 
-### Behaviour Subject
+### Behavior Subject
 
 When an observer subscribes to a `BehaviorSubject`, it begins by emitting the item most recently emitted by the source Observable (or a seed/default value if none has yet been emitted) and then continues to emit any other items emitted later by the source Observable(s).
 
 However, if the source Observable terminates with an error, the BehaviorSubject will not emit any items to subsequent observers, but will simply pass along the error notification from the source Observable.
 
-See more [here](https://indepth.dev/reference/rxjs/subjects/behaviour-subject).
+See more [here](https://indepth.dev/reference/rxjs/subjects/behavior-subject).
 
 ### Replay Subject
 
