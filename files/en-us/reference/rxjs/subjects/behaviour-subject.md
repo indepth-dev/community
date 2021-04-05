@@ -1,10 +1,10 @@
 ---
-title: BehaviourSubject - RxJS Reference | indepth.dev
+title: BehaviorSubject - RxJS Reference | indepth.dev
 slug: reference/rxjs/subjects/behaviour-subject
 tags: rxjs, javascript, reactive programming
 ---
 
-# BehaviourSubject
+# BehaviorSubject
 
 `BehaviorSubject` is a variant of a [Subject](https://indepth.dev/reference/rxjs/subjects) which has a notion of the current value that it stores and emits to all new subscriptions. This current value is either the item most recently emitted by the source observable or a seed/default value if none has yet been emitted. Since there must always be a current value, `BehaviorSubject` requires an initial value during initialization. If you want the last emitted value(s) on subscription, but do not want to supply a seed value, check out [ReplaySubject](https://indepth.dev/reference/rxjs/subjects/replay-subject) instead.
 
