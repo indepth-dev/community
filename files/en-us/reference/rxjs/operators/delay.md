@@ -1,4 +1,5 @@
 ---
+name: delay
 title: delay - RxJS Reference | indepth.dev
 slug: reference/rxjs/operators/delay
 tags: rxjs, javascript, reactive programming

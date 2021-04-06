@@ -1,4 +1,5 @@
 ---
+name: exhaustMap
 title: exhaustMap - RxJS Reference | indepth.dev
 slug: reference/rxjs/operators/exhaust
 tags: rxjs, javascript, reactive programming

@@ -1,4 +1,5 @@
 ---
+name: filter
 title: filter - RxJS Reference | indepth.dev
 slug: reference/rxjs/operators/filter
 tags: rxjs, javascript, reactive programming

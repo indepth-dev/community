@@ -1,4 +1,5 @@
 ---
+name: tap
 title: tap - RxJS Reference | indepth.dev
 slug: reference/rxjs/operators/tap
 tags:

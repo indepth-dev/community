@@ -1,4 +1,5 @@
 ---
+name: retry
 title: retry - RxJS Reference | indepth.dev
 slug: reference/rxjs/operators/retry
 tags: rxjs, javascript, reactive programming

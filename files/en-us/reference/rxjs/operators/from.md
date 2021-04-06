@@ -1,4 +1,5 @@
 ---
+name: from
 title: from - RxJS Reference | indepth.dev
 slug: reference/rxjs/operators/from
 tags: rxjs, javascript, reactive programming

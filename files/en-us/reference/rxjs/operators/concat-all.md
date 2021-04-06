@@ -1,4 +1,5 @@
 ---
+name: concatAll
 title: concatAll - RxJS Reference | indepth.dev
 slug: reference/rxjs/operators/concat-all
 tags: rxjs, javascript, reactive programming

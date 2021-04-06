@@ -1,4 +1,5 @@
 ---
+name: debounceTime
 title: debounceTime - RxJS Reference | indepth.dev
 slug: reference/rxjs/operators/debounce-time
 tags: rxjs, javascript, reactive programming

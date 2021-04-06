@@ -1,4 +1,5 @@
 ---
+name: auditTime
 title: auditTime - RxJS Reference | indepth.dev
 slug: reference/rxjs/operators/audit-time
 tags: rxjs, javascript, reactive programming

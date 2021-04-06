@@ -1,4 +1,5 @@
 ---
+name: takeWhile
 title: takeWhile - RxJS Reference | indepth.dev
 slug: reference/rxjs/operators/take-while
 tags: rxjs, javascript, reactive programming

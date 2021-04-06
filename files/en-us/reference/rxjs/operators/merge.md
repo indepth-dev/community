@@ -1,4 +1,5 @@
 ---
+name: merge
 title: merge - RxJS Reference | indepth.dev
 slug: reference/rxjs/operators/merge
 tags: rxjs, javascript, reactive programming

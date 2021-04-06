@@ -1,4 +1,5 @@
 ---
+name: subjects
 title: Subjects - RxJS Reference | indepth.dev
 slug: reference/rxjs/subjects
 ---

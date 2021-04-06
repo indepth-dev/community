@@ -1,4 +1,5 @@
 ---
+name: concatMap
 title: concatMap - RxJS Reference | indepth.dev
 slug: reference/rxjs/operators/concat-map
 tags: rxjs, javascript, reactive programming

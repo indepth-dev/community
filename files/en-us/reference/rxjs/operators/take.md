@@ -1,4 +1,5 @@
 ---
+name: take
 title: take - RxJS Reference | indepth.dev
 slug: reference/rxjs/operators/take
 tags: rxjs, javascript, reactive programming

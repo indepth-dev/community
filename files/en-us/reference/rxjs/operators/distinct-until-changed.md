@@ -1,4 +1,5 @@
 ---
+name: distinctUntilChanged
 title: distinctUntilChanged - RxJS Reference | indepth.dev
 slug: reference/rxjs/operators/distinct-until-changed
 tags: rxjs, javascript, reactive programming

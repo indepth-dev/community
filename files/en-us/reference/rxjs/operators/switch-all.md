@@ -1,4 +1,5 @@
 ---
+name: switchAll
 title: switchAll - RxJS Reference | indepth.dev
 slug: reference/rxjs/operators/switch-all
 tags: rxjs, javascript, reactive programming

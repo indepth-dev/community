@@ -1,4 +1,5 @@
 ---
+name: takeUntil
 title: takeUntil - RxJS Reference | indepth.dev
 slug: reference/rxjs/operators/take-until
 tags: rxjs, javascript, reactive programming

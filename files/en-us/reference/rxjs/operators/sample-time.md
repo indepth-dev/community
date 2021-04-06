@@ -1,4 +1,5 @@
 ---
+name: sampleTime
 title: sampleTime - RxJS Reference | indepth.dev
 slug: reference/rxjs/operators/sample-time
 tags: rxjs, javascript, reactive programming

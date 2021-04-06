@@ -1,4 +1,5 @@
 ---
+name: throttleTime
 title: throttleTime - RxJS Reference | indepth.dev
 slug: reference/rxjs/operators/throttle-time
 tags: rxjs, javascript, reactive programming

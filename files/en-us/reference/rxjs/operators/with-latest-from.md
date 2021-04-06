@@ -1,4 +1,5 @@
 ---
+name: withLatestFrom
 title: withLatestFrom - RxJS Reference | indepth.dev
 slug: reference/rxjs/operators/with-latest-from
 tags: rxjs, javascript, reactive programming

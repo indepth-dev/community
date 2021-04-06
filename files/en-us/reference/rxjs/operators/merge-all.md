@@ -1,4 +1,5 @@
 ---
+name: mergeAll
 title: mergeAll - RxJS Reference | indepth.dev
 slug: reference/rxjs/operators/merge-all
 tags: rxjs, javascript, reactive programming

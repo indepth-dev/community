@@ -1,4 +1,5 @@
 ---
+name: zip
 title: zip - RxJS Reference | indepth.dev
 slug: reference/rxjs/operators/zip
 tags: rxjs, javascript, reactive programming

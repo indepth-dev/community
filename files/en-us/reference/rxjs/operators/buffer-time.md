@@ -1,4 +1,5 @@
 ---
+name: bufferTime
 title: bufferTime - RxJS Reference | indepth.dev
 slug: reference/rxjs/operators/buffer-time
 tags: rxjs, javascript, reactive programming

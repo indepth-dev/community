@@ -1,4 +1,5 @@
 ---
+name: buffer
 title: buffer - RxJS Reference | indepth.dev
 slug: reference/rxjs/operators/buffer
 tags: rxjs, javascript, reactive programming

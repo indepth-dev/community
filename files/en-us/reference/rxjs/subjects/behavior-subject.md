@@ -1,4 +1,5 @@
 ---
+name: behaviorSubject
 title: BehaviorSubject - RxJS Reference | indepth.dev
 slug: reference/rxjs/subjects/behaviour-subject
 tags: rxjs, javascript, reactive programming

@@ -1,4 +1,5 @@
 ---
+name: map
 title: map - RxJS Reference | indepth.dev
 slug: reference/rxjs/operators/map
 tags:

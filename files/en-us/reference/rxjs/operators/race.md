@@ -1,4 +1,5 @@
 ---
+name: race
 title: race - RxJS Reference | indepth.dev
 slug: reference/rxjs/operators/race
 tags: rxjs, javascript, reactive programming

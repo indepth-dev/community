@@ -1,4 +1,5 @@
 ---
+name: delayWhen
 title: delayWhen - RxJS Reference | indepth.dev
 slug: reference/rxjs/operators/delay-when
 tags: rxjs, javascript, reactive programming

@@ -1,4 +1,5 @@
 ---
+name: retryWhen
 title: retryWhen - RxJS Reference | indepth.dev
 slug: reference/rxjs/operators/retry-when
 tags: rxjs, javascript, reactive programming

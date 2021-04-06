@@ -1,4 +1,5 @@
 ---
+name: catchError
 title: catchError - RxJS Reference | indepth.dev
 slug: reference/rxjs/operators/catch-error
 tags: rxjs, javascript, reactive programming

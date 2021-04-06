@@ -1,6 +1,7 @@
 ---
+name: rxjs
 title: RxJS Reference | indepth.dev
-slug: reference/rxjs/operators
+slug: reference/rxjs
 ---
 
 # What is RxJS and Observable?

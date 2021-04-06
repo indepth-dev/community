@@ -1,4 +1,5 @@
 ---
+name: mergeMap
 title: mergeMap - RxJS Reference | indepth.dev
 slug: reference/rxjs/operators/merge-map
 tags: rxjs, javascript, reactive programming

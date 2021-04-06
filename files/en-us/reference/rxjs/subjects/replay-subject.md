@@ -1,4 +1,5 @@
 ---
+name: replaySubject
 title: replaySubject - RxJS Reference | indepth.dev
 slug: reference/rxjs/subjects/replay-subject
 ---

@@ -1,4 +1,5 @@
 ---
+name: bufferWhen
 title: bufferWhen - RxJS Reference | indepth.dev
 slug: reference/rxjs/operators/buffer-when
 tags: rxjs, javascript, reactive programming

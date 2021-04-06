@@ -1,4 +1,5 @@
 ---
+name: switchMap
 title: switchMap - RxJS Reference | indepth.dev
 slug: reference/rxjs/operators/switch-map
 tags: rxjs, javascript, reactive programming

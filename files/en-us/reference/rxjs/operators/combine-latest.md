@@ -1,4 +1,5 @@
 ---
+name: combineLatest
 title: combineLatest - RxJS Reference | indepth.dev
 slug: reference/rxjs/operators/combine-latest
 tags: rxjs, javascript, reactive programming

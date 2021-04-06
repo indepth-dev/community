@@ -1,4 +1,5 @@
 ---
+name: exhaust
 title: exhaust - RxJS Reference | indepth.dev
 slug: reference/rxjs/operators/exhaust
 tags: rxjs, javascript, reactive programming
