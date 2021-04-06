@@ -13,7 +13,7 @@ tags: rxjs, javascript, reactive programming
 
 There’s another more crucial difference. Once `BehaviorSubject` receives the complete or the error notification and transitions into a stopped state, all subsequent subscriptions will only receive the complete or the error notification and **will not** receive the current value. 
 
-**In contrast, even in the stopped state in case of a completion or an error on the source observable,  `ReplaySubject` still replays the cached values before sending the complete or the error error notification to new subsequent subscriptions.**
+In contrast, even in the stopped state in case of a completion or an error on the source observable,  `ReplaySubject` **still replays the cached values** before sending the complete or the error error notification to new subsequent subscriptions.
 
 When creating a `ReplaySubject` you can specify how many values you want to store in the buffer (bufferSize) and the amount of time to hold a value in the buffer before removing it from it (windowTime). Both configurations may exist simultaneously. 
 
