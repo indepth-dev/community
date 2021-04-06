@@ -1,5 +1,5 @@
 ---
-name: asyncSubject
+name: AsyncSubject
 title: AsyncSubject - RxJS Reference | indepth.dev
 slug: reference/rxjs/subjects/async-subject
 tags: rxjs, javascript, reactive programming
