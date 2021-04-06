@@ -9,7 +9,7 @@ tags: rxjs, javascript, reactive programming
 
 `ReplaySubject` is a variant of a [Subject](https://indepth.dev/reference/rxjs/subjects) which keeps a cache of previous values emitted by a source observable and sends them to all new observers immediately on subscription. This behavior of replaying a sequence of old values to new subscribes is where the name for this type of a subject comes from. When an observer subscribes to a ReplaySubject, the subject begins by first emitting all values from the cache and then continues to emit any other items emitted by the source observable after the subscription. `ReplaySubject` will replay the cached sequence of values even if the observer subscribes much later than the values were cached.
 
-`ReplaySubject` is similar to the [BehaviorSubject](https://indepth.dev/reference/rxjs/subjects/behaviour-subject) in the way that it can send cached values to new subscribers, but instead of just one current value, it can record and replay a whole series of values. 
+`ReplaySubject` is similar to the [BehaviorSubject](https://indepth.dev/reference/rxjs/subjects/behavior-subject) in the way that it can send cached values to new subscribers, but instead of just one current value, it can record and replay a whole series of values. 
 
 There’s another more crucial difference. Once `BehaviorSubject` receives the complete or the error notification and transitions into a stopped state, all subsequent subscriptions will only receive the complete or the error notification and **will not** receive the current value. 
 
