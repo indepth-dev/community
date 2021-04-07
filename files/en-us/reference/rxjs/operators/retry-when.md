@@ -55,7 +55,7 @@ fromFetch(url).pipe(
 
 ## Playground
 
-<iframe src="https://stackblitz.com/edit/indepth-rxjs-retry-when?embed=1&file=index.ts"></iframe>
+<iframe src="https://stackblitz.com/edit/indepth-rxjs-retry-when-new?embed=1&file=index.ts"></iframe>
 
 ## Additional resources
 
