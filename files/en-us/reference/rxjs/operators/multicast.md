@@ -68,7 +68,7 @@ As you can see, we now are getting 3 values logged - 2 for each subscription han
 
 It’s a bit elaborate to create a subject and deal with subscriptions in this way. That’s where `multicast` can help. Here’s how we can achieve the same result using `multicast`:
 
-```javasc
+```javascript
 const shared = obs.pipe(
    multicast(new Subject())
 );
