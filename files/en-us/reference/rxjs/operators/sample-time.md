@@ -50,7 +50,7 @@ fromEvent(inputElement, 'input')
 
 ## Playground
 
-<iframe src="https://stackblitz.com/edit/indepth-rxjs-sampletime?embed=1&file=index.ts"></iframe>
+<iframe src="https://stackblitz.com/edit/indepth-rxjs-sample-time?embed=1&file=index.ts"></iframe>
 
 ## Additional resources
 
