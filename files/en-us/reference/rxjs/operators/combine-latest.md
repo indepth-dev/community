@@ -7,7 +7,7 @@ tags: rxjs, javascript, reactive programming
 
 # combineLatest
 
-`combineLatest` allows to merge several streams by taking the most recent value from input observables and emitting those values to the observer as an array. The operators caches the last value for each input observable and **only** once all input observables produced at least one value it emits the combined output to the observer.
+`combineLatest` allows to merge several streams by taking the most recent value from each input observable and emitting those values to the observer as a combined output (usually as an array). The operators caches the last value for each input observable and **only** once all input observables produced at least one value it emits the combined cached values to the observer.
 
 The resulting stream completes when all inner streams complete and will throw an error if any of the inner streams throws an error. It will never complete if any of the inner streams doesn’t complete. On the other hand, if any stream does not emit value but completes, resulting stream will complete at the same moment without emitting anything, since it will be now impossible to include value from completed input stream in resulting sequence. Also, if some input stream does not emit any value and never completes, `combineLatest` will also never emit and never complete, since, again, it will wait for all streams to emit some value.
 
