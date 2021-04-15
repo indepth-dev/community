@@ -42,7 +42,7 @@ There are many different categories of operators. Here are some of the most comm
 - Error handling
    - [catchError](https://indepth.dev/reference/rxjs/operators/catch-error), [retry](https://indepth.dev/reference/rxjs/operators/retry), [retryWhen](https://indepth.dev/reference/rxjs/operators/retry-when)
 - Multicasting
-   - publish, multicast, share
+   - [multicast](https://indepth.dev/reference/rxjs/operators/multicast), [publish](https://indepth.dev/reference/rxjs/operators/publish), share
 
 An operator is a function that takes a source observable, creates a new observable inside and connects both observables through a subscription. This new observable is returned from the operator function and passed down an operators chain. The signature for an operator function looks like this:
 
