@@ -8,7 +8,7 @@ tags: rxjs, javascript, reactive programming
 # publish
 
 `publish` operator is a mechanism to introduce a [Subject](https://indepth.dev/reference/rxjs/subjects) into the observable stream. This makes it possible to share a **single** subscription to the underlying stream between multiple subscribers.
-`publish` is mostly used as a shortcut for the `multicast` operator, so to understand `publish` [you need to understand how multicast works](https://indepth.dev/reference/rxjs/operators/multicast). 
+`publish` is mostly used as a shortcut for the `multicast` operator, so to understand `publish` you need to understand [how `multicast` works](https://indepth.dev/reference/rxjs/operators/multicast). 
 
 Here’s how `publish` operator can be used to share a subscription to the `obs` stream between `subscription 1` and `subscription 2` :
 
