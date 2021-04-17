@@ -1,7 +1,7 @@
 ---
 name: publishReplay
 title: publishReplay - RxJS Reference | indepth.dev
-slug: reference/rxjs/operators/multicast
+slug: reference/rxjs/operators/publish-replay
 tags: rxjs, javascript, reactive programming
 ---
 

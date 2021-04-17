@@ -1,7 +1,7 @@
 ---
 name: publish
 title: publish - RxJS Reference | indepth.dev
-slug: reference/rxjs/operators/multicast
+slug: reference/rxjs/operators/publish
 tags: rxjs, javascript, reactive programming
 ---
 
