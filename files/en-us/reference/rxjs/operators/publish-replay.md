@@ -7,7 +7,7 @@ tags: rxjs, javascript, reactive programming
 
 # publishReplay
 
-`publishReplay` operator is a variation of the [publish](https://indepth.dev/reference/rxjs/operators/publish) operator which internally uses [ReplaySubject](https://indepth.dev/reference/rxjs/subjects/replay-subject) instead of the plain [Subject](https://indepth.dev/reference/rxjs/subjects) in the case of the `publish` operator. `publishReplay` makes it possible to share a **single** subscription to the underlying stream between multiple subscribers and replay a set of values that happened before the subscription to new subscriptions.
+`publishReplay` operator is a variation of the [publish](https://indepth.dev/reference/rxjs/operators/publish) operator which internally uses [ReplaySubject](https://indepth.dev/reference/rxjs/subjects/replay-subject) instead of the plain [Subject](https://indepth.dev/reference/rxjs/subjects) in the case of the `publish` operator. `publishReplay` makes it possible to share a **single** subscription to the underlying stream between multiple subscribers and replay a set of values that happened  before the underlying stream completed.
 
 `publishReplay` can be used as a shortcut for the [multicast](https://indepth.dev/reference/rxjs/operators/multicast) operator with the `ReplaySubject`, so to understand `publish` you need to understand [how `multicast` works](https://indepth.dev/reference/rxjs/operators/multicast). 
 
