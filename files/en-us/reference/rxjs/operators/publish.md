@@ -164,5 +164,5 @@ underlying stream completed
 
 That's the effect of the `multicast` operator with the factory function.
 
-There are a couple of variations of the `publish` operator that instead of the plain `Subject` use [ReplaySubject](https://indepth.dev/reference/rxjs/subjects/replay-subject) or [BehaviorSubject](https://indepth.dev/reference/rxjs/subjects/behavior-subject). Those operators are [publishReplay](https://indepth.dev/reference/rxjs/operators/publish-replay) and publishBehavior.
+There are a couple of variations of the `publish` operator that instead of the plain `Subject` use [ReplaySubject](https://indepth.dev/reference/rxjs/subjects/replay-subject) or [BehaviorSubject](https://indepth.dev/reference/rxjs/subjects/behavior-subject). Those operators are [publishReplay](https://indepth.dev/reference/rxjs/operators/publish-replay) and [publishBehavior](https://indepth.dev/reference/rxjs/operators/publish-behavior).
 
