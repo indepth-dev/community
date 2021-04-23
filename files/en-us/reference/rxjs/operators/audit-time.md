@@ -7,7 +7,7 @@ tags: rxjs, javascript, reactive programming
 
 # auditTime
 
-`auditTime` delays the values emitted by a source observable for the given due time. Similarly to [debounceTime](https://indepth.dev/reference/rxjs/operators/debounce-time), this operator can be used to control the rate with which the values are emitted to an observer. Unlike `debounceTime` though, `throttleTime` guarantees the values will be emitted regurarly, but not more often than the configured interval.
+`auditTime` delays the values emitted by a source observable for the given due time. Similarly to [debounceTime](https://indepth.dev/reference/rxjs/operators/debounce-time), this operator can be used to control the rate with which the values are emitted to an observer. Unlike `debounceTime` though, `auditTime` guarantees the values will be emitted regurarly, but not more often than the configured interval.
 
 `auditTime` is very similar to throttleTime with the configuration `{leading: false, trailing: true}`. There’s one difference regarding the handling of the trailing value. If the source observable completes before the interval ends, `throttleTime` still sends the value to an observer, while `auditTime` discards it.
 
