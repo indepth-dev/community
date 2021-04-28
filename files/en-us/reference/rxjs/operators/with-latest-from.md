@@ -41,7 +41,7 @@ And the editable demo:
 
 ## Usage
 
-This operator cab ne used when you have one stream that drives emissions but also need to combine its values with latest values from other streams.
+This operator can be used when you have one stream that drives emissions but also need to combine its values with latest values from other streams.
 
 ## Additional resources
 
