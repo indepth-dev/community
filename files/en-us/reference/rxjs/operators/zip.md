@@ -31,7 +31,7 @@ Here is the code example that demonstrates the setup shown by the above diagram:
 const a = stream('a', 200, 3);
 const b = stream('b', 500, 3);
 
-combineLatest(a, b).subscribe(fullObserver(operator));
+zip(a, b).subscribe(fullObserver(operator));
 ```
 
 And the editable demo:
