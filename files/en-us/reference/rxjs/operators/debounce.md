@@ -7,7 +7,7 @@ tags: rxjs, javascript, reactive programming
 
 # debounce
 
-`debounce` delays the values emitted by a source until the duration Observable emits a value or completes. If within this time a new value arrives, the previous pending value is dropped and the duration Obsevarbale is re-subscribed. In this way `debounce` keeps track of the most recent value and emits that most recent value using the duration observable as an indicator of where to do that.
+`debounce` delays the values emitted by a source until the duration Observable emits a value or completes. If within this time a new value arrives, the previous pending value is dropped and the duration Observable is re-subscribed. In this way `debounce` keeps track of the most recent value and emits that most recent value using the duration observable as an indicator of where to do that.
 
 The operator works in the following way:
 1. when new value arrives, execute a function to get the duration Observable
