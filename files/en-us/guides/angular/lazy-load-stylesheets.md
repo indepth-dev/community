@@ -79,6 +79,6 @@ You will maybe need to tweak the document base URL using `base` tag to successfu
 
 ## Conclusion
 
-We learned that we can exclude by simply setting `inject` false in workspace configuration file, i.e. `angular.json`. And to load them on demand, we will use the `bundleName` option.
+We learnt that we can exclude by simply setting `inject` false in workspace configuration file, i.e. `angular.json`. And to load them on demand, we will use the `bundleName` option.
 
 The advantage of excluding stylesheets from the bundle is reduced bundle size, which will in turn improve the initial load time of application and finally user experience will be better.
