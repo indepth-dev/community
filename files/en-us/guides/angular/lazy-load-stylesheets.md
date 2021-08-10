@@ -1,3 +1,8 @@
+---
+author_name: Dharmen Shah
+author_link: https://twitter.com/shhdharmen
+---
+
 # How to exclude stylesheets from the bundle and lazy load them in Angular?
 
 Let’s learn how we can load stylesheets only when needed without making them part of the application bundle.
