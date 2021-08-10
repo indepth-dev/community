@@ -1,3 +1,3 @@
 # Angular guides
 
-1. [Lazy load stylesheets](/guides/angular/lazy-load-stylesheets).
+1. [Lazy load stylesheets](/tutorials/angular/lazy-load-stylesheets).
