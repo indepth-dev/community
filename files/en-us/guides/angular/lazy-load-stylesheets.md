@@ -1,4 +1,5 @@
 ---
+title: How to exclude stylesheets from the bundle and lazy load them in Angular? - Angular Tutorials | indepth.dev
 author_name: Dharmen Shah
 author_link: https://twitter.com/shhdharmen
 ---
