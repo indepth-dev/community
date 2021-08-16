@@ -2,6 +2,7 @@
 title: How to implement automatic token insertion in requests using HTTP interceptor - Angular Tutorials | indepth.dev
 author_name: Varvara Sandakova
 author_link: https://twitter.com/varvarasandako1
+discussion_link: https://github.com/indepth-dev/community/discussions/146
 ---
 # **How to implement automatic token insertion in requests using HTTP interceptor**
 
@@ -150,10 +151,10 @@ If you’re curious to learn more about interceptors, check out the following ar
 
 ## **References:**
 
-https://indepth.dev/posts/1455/how-to-split-http-interceptors-between-multiple-backends
+[How to split http interceptors between multiple backends](https://indepth.dev/posts/1455/how-to-split-http-interceptors-between-multiple-backends)
 
-https://indepth.dev/posts/1118/insiders-guide-into-interceptors-and-httpclient-mechanics-in-angular
+[Insiders guide into interceptors and httpclient mechanics in angular](https://indepth.dev/posts/1118/insiders-guide-into-interceptors-and-httpclient-mechanics-in-angular)
 
-https://indepth.dev/posts/1051/top-10-ways-to-use-interceptors-in-angular
+[Top 10 ways to use interceptors in angular](https://indepth.dev/posts/1051/top-10-ways-to-use-interceptors-in-angular)
 
-https://angular.io/guide/http#intercepting-requests-and-responses
+[Http intercepting requests-and responses](https://angular.io/guide/http#intercepting-requests-and-responses)
