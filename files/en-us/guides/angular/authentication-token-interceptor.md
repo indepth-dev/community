@@ -18,7 +18,7 @@ Authentication is one of the most common use cases for using an interceptor. In 
 
 Suppose, we have the following service used in authentication that stores and reads tokens from localstorage:
 
-```
+```javascript
 import { Injectable } from '@angular/core';
 @Injectable()
 export class AuthService{
@@ -35,7 +35,7 @@ In Angular an interceptor has a form of TS class that implements `HttpIntercepto
 
 According to Angular documentation `HttpInterceptor` interface has one crucial method - intercept - that identifies and handles a HTTP request.
 
-```
+```javascript
 interface HttpInterceptor {
  intercept(req: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>>
 }
@@ -47,7 +47,7 @@ interface HttpInterceptor {
 
 Let’s create an `AuthInterceptorService` and add authorization headers:
 
-```
+```javascript
 export class AuthInterceptorService implements HttpInterceptor {
   constructor(private authService: AuthService) {} 
  intercept(request: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {  
@@ -84,7 +84,7 @@ After modifying `HttpRequest` we call the handle method on `HttpHandler` with th
 
  The last bit that’s left is to add `AuthInterceptorService` and `AuthInterceptorService` to the `AppModule`.
 
-```
+```javascript
 import {HTTP_INTERCEPTORS } from '@angular/common/http';
 import { AuthInterceptorService} from '...';
 import { AuthService} from '...';
@@ -111,7 +111,7 @@ export class AppModule { }
 
 In case if you are going to use multiple interceptors you should define them in the next way:
 
-```
+```javascript
 import {HTTP_INTERCEPTORS } from '@angular/common/http';
 @NgModule({
  ...
