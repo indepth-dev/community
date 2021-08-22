@@ -7,19 +7,21 @@ discussion_link: https://github.com/indepth-dev/community/discussions/
 
 ## Introduction
 
-Angular's configuration system through the environment.ts files is quite powerful. However, it does not cover the use case of determining the values of certain parameters of the application at build time because they may be sensitive or because they depend on the environment in which the application is deployed.
+Angular's configuration system through the `environment.ts` files is quite powerful. However, the values set in `environment.ts` are set statically and cannot be changed at build time because they may be sensitive or because they depend on the environment in which the application is deployed.
 
 ## Reading configuration at runtime
 
-The classic way to get around this problem is to create/generate a configuration file as an asset that will be fetched by the application, at runtime in the browser, once it is loaded.
+The usual way to get around this problem is to create/generate a configuration file as an asset that will be fetched by the application at runtime in the browser.
 
-This approach can be problematic as it obviously impacts the LCP of the application (initial load time) as the application will only be visible when Angular is loaded, the JS executed and then the JSON file retrieved from the server as an asset to finally load the components based on the retrieved configuration.
+This approach can be problematic as it obviously impacts the LCP of the application (initial load time) as the application will only be visible when Angular is loaded, the JS parsed and executed and then the configuration file retrieved from the server as an asset.
 
 It can be required only if the configuration depends on some context at runtime (the user for example).
 
 ## Preparing the configuration at build time
 
-The solution proposed in this article is to inject envrionment variables directly into the Angular application at build time using the webpack `Define` plugin. The webpack `Define` plugin allows to replace any expression containing a specified string with the specified value.
+A better alternative is to inject envrionment variables directly into the Angular application at build time. 
+
+This can be achieved using the webpack `Define` plugin that replaces any expression containing a specified string with the specified value.
 
 ```js
 new webpack.DefinePlugin({
@@ -33,7 +35,7 @@ Let's first look at how this plugin works independently of an Angular applicatio
 mkdir webpack-project && cd _
 yarn init -y
 yarn add -D webpack webpack-cli
-mkdir src && code index.js
+mkdir src && code src/index.js
 ```
 
 ```js
@@ -72,11 +74,11 @@ We can conclude that the replacement is done statically at build/bundling time. 
 
 ## Angular CLI and webpack
 
-Angular CLI uses webpack under the hood. Webpack roams over your application source code, looking for import statements, building a dependency graph, and emitting one or more bundles.
+Angular CLI uses webpack under the hood. Webpack roams over the application source code, looking for import statements, building a dependency graph, and emitting one or more bundles.
 
-Since Angular CLI X.Y, it is possible to hook into the Angular build workflow through a custom builder that allows you to override the webpack configuration before execution by adding/overriding plugin and rules.
+Since Angular CLI X.Y, it is possible to hook into the Angular build workflow through a custom builder that allows to override the webpack configuration before the execution, eventually by adding/overriding plugin and rules.
 
-To extend the webpack configuration, it would be necessary to create a specific builder that will execute the Angular builder downstream after having performed a specific processing.
+To extend the webpack configuration, it would be necessary to create a custom builder. The custom will run our custom code then eventually execute the Angular native builder.
 
 Here is the signature of the Angular builder to invoke from our custom builder.
 
@@ -92,7 +94,7 @@ export declare function buildWebpackBrowser(
 ): Observable<BrowserBuilderOutput>;
 ```
 
-Without going into the details of implementation of a builder because it is not the purpose of this article, let's focus on the third parameter of the execution of the builder, it can take the following value:
+Without going into the details of implementation of a builder because it is not the purpose of this article, let's focus on the third parameter of the execution of the builder. It is a function that gets the webpack configuration then returns it. Let's add the `Define` plugin to the list of plugins:
 
 ```ts
 {
@@ -109,7 +111,7 @@ Without going into the details of implementation of a builder because it is not 
 
 By applying our builder to an Angular Architect target in the `angular.json` configuration, we will have an equivalent execution of the native Angular builder augmented with the prepared webpack configuration.
 
-Thus the component below:
+The component below:
 
 ```ts
 @Component({
@@ -131,6 +133,8 @@ constructor() {
 }
 // Ivy Code
 ```
+
+## Passing Environment Variables
 
 In order to pass specific environment variables of the system to our application code we need the following configuration:
 
@@ -154,25 +158,25 @@ And that's it!
 
 ## Using existing solutions
 
-Developing our own Angular builder can be heavy for such a simple need, an alternative would be to use:
+Developing our own Angular builder can be tedious for such a simple need, an alternative would be to use:
 
-### custom-webpack:
+### custom-webpack
 
-Allows customizing build configuration without ejecting webpack configuration
+A builder that allows customizing the webpack configuration through some CLI options.
 
-### ngx-build-plus:
+### ngx-build-plus
 
-Extends the Angular CLI's default build behavior without ejecting
+An custom builder that allows extending the Angular CLI's default build behavior.
 
-### @ngx-env/builder:
+### @ngx-env/builder
 
 A builder I created while writing this article, based on the implementation described below in which I added some features that might be interesting for you:
-
+- No webpack configuration, simply run `ng add @ngx-env/builder`.
 - Override of all CLI architect targets: `ng serve/build/test/server/extract-i18n`
 - Securing environment variables by limiting them to those starting with `NG_APP` (inspired by create-react-app and vue-cli)
-- Use of `dotenv` and `dotenv-expand` which allows to load environment and reference system environment variables from the .env file
-- Possibility to have `.env.local`, `.env.development`, `.env.test` and `.env.production` files with a conventional hierarchy namely used in create-react-app parcel and vue-cli
-- Injection of an environment variable directly into the template using the `env` pipe: `'NODE_ENV' | env`.
+- Use of `dotenv` and `dotenv-expand` which allows to load environment and reference system environment variables from `.env.*` files
+- Possibility to have `.env.local`, `.env.development`, `.env.test` and `.env.production` files with a conventional hierarchy similarily used in create-react-app, parcel and vue-cli
+- Injection of an environment variables directly into the template using the `env` pipe: `'NODE_ENV' | env`
 - Injection of an environment variable in the index.html `<title>NgApp on %NG_APP_BRANCH_NAME%</title>`
 
 ## Conclusion
