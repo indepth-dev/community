@@ -70,7 +70,7 @@ console.log("test");
 
 We can conclude that the replacement is done statically at build/bundling time. The same approach is to be adopted in Angular CLI.
 
-# Angular CLI and webpack
+## Angular CLI and webpack
 
 Angular CLI uses webpack under the hood. Webpack roams over your application source code, looking for import statements, building a dependency graph, and emitting one or more bundles.
 
@@ -131,8 +131,6 @@ constructor() {
 }
 // Ivy Code
 ```
-
-##
 
 In order to pass specific environment variables of the system to our application code we need the following configuration:
 
