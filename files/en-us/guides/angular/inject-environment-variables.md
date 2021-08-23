@@ -170,14 +170,14 @@ An custom builder that allows extending the Angular CLI's default build behavior
 
 ### @ngx-env/builder
 
-A builder I created while writing this article, based on the implementation described below in which I added some features that might be interesting for you:
+A builder I created while writing this article, based on the implementation described above, in which I added some interesting features:
 - No webpack configuration, simply run `ng add @ngx-env/builder`.
 - Override of all CLI architect targets: `ng serve/build/test/server/extract-i18n`
 - Securing environment variables by limiting them to those starting with `NG_APP` (inspired by create-react-app and vue-cli)
-- Use of `dotenv` and `dotenv-expand` which allows to load environment and reference system environment variables from `.env.*` files
+- Use of `dotenv` and `dotenv-expand` which allow to load environment and reference system environment variables from `.env.*` files
 - Possibility to have `.env.local`, `.env.development`, `.env.test` and `.env.production` files with a conventional hierarchy similarily used in create-react-app, parcel and vue-cli
-- Injection of an environment variables directly into the template using the `env` pipe: `'NODE_ENV' | env`
-- Injection of an environment variable in the index.html `<title>NgApp on %NG_APP_BRANCH_NAME%</title>`
+- Injection of an environment variable into the template using the `env` pipe: `'NODE_ENV' | env`
+- Injection of an environment variable into index.html `<title>NgApp on %NG_APP_BRANCH_NAME%</title>`
 
 ## Conclusion
 
