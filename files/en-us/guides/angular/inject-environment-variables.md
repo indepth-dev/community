@@ -7,7 +7,7 @@ discussion_link: https://github.com/indepth-dev/community/discussions/
 
 ## Introduction
 
-Angular's configuration system through the `environment.ts` files is quite powerful. However, the values set in `environment.ts` are set statically and cannot be changed at build time because they may be sensitive or because they depend on the environment in which the application is deployed.
+Angular's configuration system through the `environment.ts` files is quite powerful. However, the values set in `environment.ts` are set statically and cannot be changed at build time, this can be problematic because they might be sensitive and should live outside version conrol or they might depend on the environment in which the application is deployed.
 
 ## Reading configuration at runtime
 
