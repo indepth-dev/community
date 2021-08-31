@@ -67,7 +67,6 @@ You can use the [`Attribute`](https://angular.io/api/core/Attribute) parameter d
 
 So for an earlier example, to read the `type` attribute, we will do something like below:
 
-
 ```typescript
 import { Attribute, Component } from '@angular/core';
 
@@ -79,7 +78,6 @@ export class SmartInputComponent {
   constructor(@Attribute('type') public type: string) {}
 }
 ```
-
 
 With the above code, `smart-input` will render
 
@@ -191,8 +189,6 @@ We learned three ways to read `type`’s value for our`smart-input` component, h
 
 ## Conclusion
 
-We learned how to read the HTML attribute value in a component or directive using the  `ElementRef` class, `@Attribute()` and `@Input()` decorators.
+We learned how to read the HTML attribute value in a component or directive using the  `ElementRef` class, `@Attribute()` and `@Input()` decorators. We also learned their usages, how they’re used in some built-in directives and limitations.
 
-We also learned their usages, how they’re used in some built-in directives and limitations.
-
-I have also created a [stackblitz](https://stackblitz.com/edit/angular-ivy-8cyazj?file=src/app/app.component.ts) for all of the code above.
+I have created a [stackblitz](https://stackblitz.com/edit/angular-ivy-8cyazj?file=src/app/app.component.ts) for all of the code above.
