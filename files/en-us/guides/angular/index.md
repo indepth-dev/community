@@ -6,3 +6,4 @@ title: Angular Tutorials | indepth.dev
 
 1. [Lazy load stylesheets](/tutorials/angular/lazy-load-stylesheets).
 2. [Authentication token interceptor](/tutorials/angular/authentication-token-interceptor).
+3. [Get attribute value](/tutorials/angular/get-attribute-value).
