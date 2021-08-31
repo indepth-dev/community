@@ -7,9 +7,7 @@ discussion_link: https://github.com/indepth-dev/community/discussions/151
 
 # How to get an attribute value in Angular's components and directives
 
-
 In this tutorial, we will explore all the ways to read HTML attribute values passed in the component or directive.
-
 
 ## Reading HTML Attributes
 
