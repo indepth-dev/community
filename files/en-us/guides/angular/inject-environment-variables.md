@@ -2,6 +2,7 @@
 title: How to inject environment variables into your Angular applications - Angular Tutorials | indepth.dev
 author_name: Chihab Otmani
 author_link: https://twitter.com/chihabotmani
+discussion_link: https://github.com/indepth-dev/community/discussions/161
 ---
 
 # Introduction
