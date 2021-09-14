@@ -3,6 +3,7 @@ title: How to inject environment variables into your Angular applications - Angu
 author_name: Chihab Otmani
 author_link: https://twitter.com/chihabotmani
 discussion_link: https://github.com/indepth-dev/community/discussions/161
+display_name: Inject environment variables
 ---
 
 # Introduction
@@ -62,7 +63,7 @@ This approach is all the more interesting when these environment variables are s
 
 In a Node.js application we consume environment variables using the global variable `process.env`.
 
-```sh
+```shell
 API_URL=https://dev.example.com/api node -e 'console.log(process.env.API_URL)'; # https://dev.example.com/api
 node -e 'console.log(process.env.HOME)';  # /home/chihab
 ```

@@ -3,6 +3,7 @@ title: How to make textarea grow on input in Angular - Angular Tutorials | indep
 author_name: Touhid Rahman
 author_link: https://twitter.com/touhidrahman87
 discussion_link: https://github.com/indepth-dev/community/discussions/159
+display_name: Grow textarea on input
 ---
 
 # **How to make textarea grow on input in Angular**
