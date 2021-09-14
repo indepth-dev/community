@@ -3,6 +3,7 @@ title: How to implement automatic token insertion in requests using HTTP interce
 author_name: Varvara Sandakova
 author_link: https://twitter.com/varvarasandako1
 discussion_link: https://github.com/indepth-dev/community/discussions/146
+display_name: Authentication token interceptor
 ---
 # **How to implement automatic token insertion in requests using HTTP interceptor**
 

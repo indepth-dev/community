@@ -3,6 +3,7 @@ title: How to get an attribute value in Angular's components and directives - An
 author_name: Dharmen Shah
 author_link: https://twitter.com/shhdharmen
 discussion_link: https://github.com/indepth-dev/community/discussions/151
+display_name: Get attribute value
 ---
 
 # How to get an attribute value in Angular's components and directives
