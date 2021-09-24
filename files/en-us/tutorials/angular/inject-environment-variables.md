@@ -8,7 +8,7 @@ display_name: Inject environment variables
 
 # Introduction
 
-Consuming environment variables in an Angular application is not natively supported. This guide describes will help you understand:
+Consuming environment variables in an Angular application is not natively supported. This guide will walk you through you understanding:
 
 - Why using environment variables for the configuration of an Angular application is a good practice
 - How to inject evnironment variables in an Angular application using a CLI custom builder
@@ -17,7 +17,7 @@ For the impatient, some ready to use solutions are listed at the end of the arti
 
 # Configuring application environments
 
-Angular CLI's configuration system through the environment.ts files is quite powerful. It relies on a file replacement mechanism at build time, which can be customized from the angular.json file in the following way:
+Angular CLI's configuration system through the environment.ts files is quite powerful. It relies on a file replacement mechanism at build time, which can be customized from the `angular.json file` in the following way:
 
 ```json
   "fileReplacements": [
@@ -30,7 +30,7 @@ Angular CLI's configuration system through the environment.ts files is quite pow
 
 This mechanism has the following shortcomings:
 
-- The `environment.\*.ts` files are by the design part of your application source code that lives inside the version control. They might contain sensitive data, which is not recommended for obvious security reasons.
+- The `environment.\*.ts` files are by the design part of your application source code that lives inside the version control, they might contain sensitive data, which is not recommended for obvious security reasons.
 
 ```ts
 const environment = {
@@ -38,7 +38,7 @@ const environment = {
 };
 ```
 
-- For each environment in our platform, we need to maintain the configuration files and their specific configurations within the application repository, meaning that any environment creation or configuration update would require a new commit to the repository.This can be tedious for both the project and the platform maintainers.
+- For each environment in our platform, we need to maintain the configuration files and their specific configurations within the application repository, meaning that any environment creation or configuration update would require a new commit to the repository. This can be tedious for both the project and the platform maintainers.
 
 # Reading configuration at runtime
 
@@ -92,7 +92,14 @@ var process = { env: {API_URL='https://dev.example.com/api'} }
 
 in our JavaScript bundle code, would we?
 
-How do we get the values of our environment variables in the JavaScript bundle executed in the browser? Webpack.
+How then do we get the values of our environment variables in the JavaScript bundle executed in the browser? 
+
+Webpack configuration.
+
+## Angular CLI and webpack
+
+Angular CLI uses webpack under the hood. Webpack roams over the application source code, looking for import statements, building a dependency graph, and emitting one or more bundles.
+Since Angular CLI 8, it is possible to hook into the Angular build workflow through a custom builder that allows to override the webpack configuration before the execution, eventually by adding/overriding plugin and rules.
 
 ### Webpack and Define plugin
 
@@ -117,16 +124,11 @@ exports.default = {
 };
 ```
 
-But wait, why are we talking about webpack here?
-
-## Angular CLI and webpack
-
-Angular CLI uses webpack under the hood. Webpack roams over the application source code, looking for import statements, building a dependency graph, and emitting one or more bundles.
-Since Angular CLI X.Y, it is possible to hook into the Angular build workflow through a custom builder that allows to override the webpack configuration before the execution, eventually by adding/overriding plugin and rules.
+Now, how to extend Angular CLI's webpack configuration? 
 
 ### Extending webpack configuration
 
-To extend the webpack configuration, it would be necessary to create a custom builder. The custom builder will run our custom code then eventually executes the Angular native builder.
+To extend the webpack configuration in CLI, it is necessary to create a custom builder. The custom builder will run our custom code then eventually executes the Angular native builder.
 Here is the signature of the Angular builder to invoke from our custom builder.
 
 ```ts
@@ -141,8 +143,9 @@ export declare function buildWebpackBrowser(
 ): Observable<BrowserBuilderOutput>;
 ```
 
-Without going into the details of implementation of a builder because it is not the purpose of this article, let's focus on the third parameter of the execution of the builder. It is a function that gets the webpack configuration then returns it. Let's add the Define plugin to the list of plugins:
+Without going into the details of implementation of a builder because it is not the purpose of this article, let's focus on the third parameter of the execution of the builder. It is a function that gets the webpack configuration then returns it. 
 
+Let's add the Define plugin to the list of plugins:
 ```ts
 {
   webpackConfiguration: async (webpackConfig: Configuration) => {
@@ -205,7 +208,7 @@ When the CLI runs, it will:
 
 - Get all the environment variables through `process.env`.
 - Retrieve the desired environment keys in a secure way using our own secureEnvBeforePassingToAngular function.
-- Add DefinePlugin to Angular CLI’s webpack configuration and map every key of `process.env`.X with the key stored in our secure environment object.
+- Add DefinePlugin to Angular CLI’s webpack configuration and map every key of `process.env.X` with the key stored in our secure environment object.
 
 And that's it!
 
@@ -243,7 +246,7 @@ A custom builder that allows extending the Angular CLI's default build behavior.
 
 # Conclusion
 
-Perhaps one day the use of environment variables in code will be natively supported in `@angular/cli` as requested by the community in this [ong-standing issue](https://github.com/angular/angular-cli/issues/4318).
+Perhaps one day the use of environment variables in code will be natively supported in `@angular/cli` as requested by the community in this [long-standing issue](https://github.com/angular/angular-cli/issues/4318).
 
 I would suggest that at least somehow only the use of `process.env` in the environment.ts file be natively replaced by the `Webpack Define` plugin. That way, our code will continue to consume the environment configuration as we do today without worrying about where the assigned values come from.
 
