@@ -1,12 +1,12 @@
 ---
-title: How to manage object in Angular FormControl? - Angular Tutorials | indepth.dev
+title: How to manage object in Angular FormControl - Angular Tutorials | indepth.dev
 author_name: Dharmen Shah
 author_link: https://twitter.com/shhdharmen
 discussion_link: https://github.com/indepth-dev/community/discussions/174
-display_name: How to manage object in Angular FormControl?
+display_name: How to manage object in Angular FormControl
 ---
 
-# How to manage object in Angular FormControl?
+# How to manage object in Angular FormControl
 
 ### In this tutorial, we will learn how to manage object in FormControl and handle conversion for input
 
