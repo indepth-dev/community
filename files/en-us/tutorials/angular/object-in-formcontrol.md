@@ -3,7 +3,7 @@ title: How to manage object in Angular FormControl? - Angular Tutorials | indept
 author_name: Dharmen Shah
 author_link: https://twitter.com/shhdharmen
 discussion_link: https://github.com/indepth-dev/community/discussions/174
-display_name: Lazy load stylesheets
+display_name: How to manage object in Angular FormControl?
 ---
 
 # How to manage object in Angular FormControl?
