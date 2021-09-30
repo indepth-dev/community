@@ -9,3 +9,4 @@ title: Angular Tutorials | indepth.dev
 3. [Get attribute value](/tutorials/angular/get-attribute-value)
 4. [Grow textarea on input](/tutorials/angular/grow-textarea-on-input)
 5. [Inject environment variables](/tutorials/angular/inject-environment-variables)
+6. [How to manage object in Angular FormControl](/tutorials/angular/object-in-formcontrol)
