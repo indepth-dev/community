@@ -8,7 +8,7 @@ display_name: How to add Vue (or another framework) to your React Micro Frontend
 
 # **How to add Vue (or another framework) to your React Micro Frontend**
 
-In my [previous post](create-micro-frontend-react.md) I walked you through how to create a basic hello-world micro frontend application which leveraged the use of webpack and React to integrate components at run time.
+In my [previous post](create-micro-frontend-react) I walked you through how to create a basic hello-world micro frontend application which leveraged the use of webpack and React to integrate components at run time.
 
 This article is going to be a continuation of that article, so if you’ve not had a chance to go through it, open the above in a new tab and come back here when you’re done.
 
@@ -190,7 +190,7 @@ The common config has a few changes specifically to get Vue working. We’ve add
 
 That should be it! Let’s fire up our terminal, and type `npm start` from your helloVue folder. Going to http://localhost:8082 in a browser should look like this:
 
-![Screenshot showing hello vue running on port 8082](images/helloVue.png)
+![Screenshot showing hello vue running on port 8082](https://images.indepth.dev/tutorials/react/helloVue.png)
 
 ## Integrating with our Micro Frontend container
 Great, so it works independently! Now let’s integrate it in our container app. All the changes we’re going to make here will be in our container folder.
@@ -287,7 +287,7 @@ export default () => {
 
 Now we should be able to run our entire micro frontend application. First you’ll need to make sure that the two child applications are running, so navigate to their folders and run `npm start` for each of them. Then in the container folder you can run `npm start` and your application should load on http://localhost:8080. It should look like this:
 
-![gif showing hello vue integrated into our container on port 8080](https://miro.medium.com/max/734/1*vwGFQCpZsHmL_jvCyVS4wA.gif)
+![gif showing hello vue integrated into our container on port 8080](https://images.indepth.dev/tutorials/react/vueGif.gif)
 
 I know it doesn’t look like much, but this is really exciting! You’re running a Vue application in your React micro frontend.
 
