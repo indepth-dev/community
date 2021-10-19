@@ -43,7 +43,6 @@ Integrate into the parent application router file
 
 ### Run time integration
 
-
 ![diagram showing run time integration](https://images.indepth.dev/tutorials/react/microUI.jpeg)
 
 
@@ -498,4 +497,5 @@ I find this quite exciting that our parent and child applications can both navig
 
 And there you have it! A working micro frontend application. I hope you managed to follow along and that you learned something on the way.
 
-I’ve written a follow up post which explains [how to add a Vue app](add-vue-to-micro-frontend).
+I’ve written a follow up post which explains [how to add a Vue app](add-vue-to-react-micro-frontend).
+If you want to learn how to deploy your micro frontend application to production, please have a look at this [article](https://indepth.dev/posts/1484/how-to-deploy-a-run-time-micro-frontend-application-using-aws).

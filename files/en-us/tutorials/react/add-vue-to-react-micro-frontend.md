@@ -293,4 +293,4 @@ I know it doesn’t look like much, but this is really exciting! You’re runnin
 
 If you had any problems along the way, you can find the source code for this tutorial on [github](https://github.com/richardtbell/microfrontend-hello-world/tree/c4f1094929e8457d3bbaaaac5840889fb0c13c9c).
 
-Please have a look at the next article in this series which walks you through how to deploy your application to production using AWS and GitHub actions. (link to next article)
+Please have a look at the next [article](https://indepth.dev/posts/1484/how-to-deploy-a-run-time-micro-frontend-application-using-aws) in this series which walks you through how to deploy your application to production using AWS and GitHub actions.
