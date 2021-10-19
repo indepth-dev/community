@@ -251,7 +251,6 @@ Fire up a terminal and type `npm run start` and let’s go test out our app:
 ![Screenshot showing hello world running on port 8081](https://images.indepth.dev/tutorials/react/helloWorldAll.png)
 ![Screenshot showing hello react running on port 8081](https://images.indepth.dev/tutorials/react/helloWorldReact.png)
 
-
 So now we’ve got our simple react app, let’s get started on our container.
 
 ##### Container
@@ -404,9 +403,7 @@ Wow! This is exciting — we’ve got an application which has a navigation bar,
 
 So what happens if we click the link to use react?…
 
-
 ![Screenshot showing hello react not loading from container running on port 8080](https://images.indepth.dev/tutorials/react/hello8080-react.png)
-
 
 You can see that the URL has changed, but unfortunately our “Hello World!” message has not changed. We’re going to need to make a few modifications to the way our application handles routing.
 
@@ -500,4 +497,5 @@ I find this quite exciting that our parent and child applications can both navig
 
 And there you have it! A working micro frontend application. I hope you managed to follow along and that you learned something on the way.
 
-I’ve written a follow up post which explains [how to add a Vue app](add-vue-to-micro-frontend).
+I’ve written a follow up post which explains [how to add a Vue app](add-vue-to-react-micro-frontend).
+If you want to learn how to deploy your micro frontend application to production, please have a look at this [article](https://indepth.dev/posts/1484/how-to-deploy-a-run-time-micro-frontend-application-using-aws).
