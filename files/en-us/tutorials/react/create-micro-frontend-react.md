@@ -499,4 +499,3 @@ I find this quite exciting that our parent and child applications can both navig
 And there you have it! A working micro frontend application. I hope you managed to follow along and that you learned something on the way.
 
 I’ve written a follow up post which explains [how to add a Vue app](add-vue-to-micro-frontend).
-If you want to learn how to deploy your micro frontend application to production, please have a look at this article (LINK TO DEPLOY ARTICLE)
