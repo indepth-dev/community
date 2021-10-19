@@ -16,7 +16,7 @@ The operator works in the following way:
 1. Subscribe to all input observables
 2. When a source observable emits a value, add to the cache for this source observable under certain index
 3. If there’s a cached value for each obsevable in the cache for this index, emit the combined values to the observer 
-4. As long as one of the source observables complete, send the complete notification to the observer, zip complete.
+4. As long as one of the source observables complete, and no more cached pairs to emit, send the complete notification to the observer, zip complete.
 5. If any of the source observables throws an error, send the error notification to the observer.
 
 In the diagram below you can see the `zip` operator combining two streams `A` and `B`. As soon as a corresponding pair is matched the resulting sequence produces a combined value:
