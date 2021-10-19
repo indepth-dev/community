@@ -44,7 +44,7 @@ Integrate into the parent application router file
 ### Run time integration
 
 
-![diagram showing run time integration](./images/microUI.jpeg)
+![diagram showing run time integration](https://images.indepth.dev/tutorials/react/microUI.jpeg)
 
 
 The container app and each child app are deployed and served independently. The container app will make HTTP requests at runtime to fetch the JavaScript required to render each child app as and when it is needed.
@@ -249,7 +249,8 @@ Almost there! All we need to do now is add a script into package.json so that we
 
 Fire up a terminal and type `npm run start` and let’s go test out our app:
 
-![Screenshot showing hello world running on port 8081](images/helloWorldAll.png)![Screenshot showing hello react running on port 8081](images/helloWorldReact.png)
+![Screenshot showing hello world running on port 8081](https://images.indepth.dev/tutorials/react/helloWorldAll.png)
+![Screenshot showing hello react running on port 8081](https://images.indepth.dev/tutorials/react/helloWorldReact.png)
 
 So now we’ve got our simple react app, let’s get started on our container.
 
@@ -397,13 +398,13 @@ export default () => {
 
 Now you should be able to run your container application (you’ll also need to have your child app running in a separate tab) and see something like this:
 
-![Screenshot showing hello world from container running on port 8080](images/hello8080.png)
+![Screenshot showing hello world from container running on port 8080](https://images.indepth.dev/tutorials/react/hello8080.png)
 
 Wow! This is exciting — we’ve got an application which has a navigation bar, coming from the parent and our “Hello World!” message coming from our child component!
 
 So what happens if we click the link to use react?…
 
-![Screenshot showing hello react not loading from container running on port 8080](images/hello8080-react.png)
+![Screenshot showing hello react not loading from container running on port 8080](https://images.indepth.dev/tutorials/react/hello8080-react.png)
 
 You can see that the URL has changed, but unfortunately our “Hello World!” message has not changed. We’re going to need to make a few modifications to the way our application handles routing.
 
@@ -497,5 +498,5 @@ I find this quite exciting that our parent and child applications can both navig
 
 And there you have it! A working micro frontend application. I hope you managed to follow along and that you learned something on the way.
 
-I’ve written a follow up post which explains [how to add a Vue app](add-vue-to-micro-frontend.md).
+I’ve written a follow up post which explains [how to add a Vue app](add-vue-to-micro-frontend).
 If you want to learn how to deploy your micro frontend application to production, please have a look at this article (LINK TO DEPLOY ARTICLE)
