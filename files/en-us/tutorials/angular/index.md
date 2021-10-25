@@ -10,3 +10,4 @@ title: Angular Tutorials | indepth.dev
 4. [Grow textarea on input](/tutorials/angular/grow-textarea-on-input)
 5. [Inject environment variables](/tutorials/angular/inject-environment-variables)
 6. [How to manage object in Angular FormControl](/tutorials/angular/object-in-formcontrol)
+7. [How to track changes in ngDoCheck with KeyValueDiffer](/tutorials/angular/track-changes-in-ngdocheck-with-keyvaluediffers)
