@@ -1,3 +1,11 @@
+---
+title: How to track changes in ngDoCheck with KeyValueDiffer - Angular Tutorials | indepth.dev
+author_name: Dharmen Shah
+author_link: https://twitter.com/shhdharmen
+discussion_link: https://github.com/indepth-dev/community/discussions/190
+display_name: How to track changes in ngDoCheck with KeyValueDiffer
+---
+
 # How to track changes in ngDoCheck with KeyValueDiffer
 
 > When we use `ngDoCheck` to detect changes, we need to make sure that our implementation is extremely lightweight and fast, so it doesn’t affect user-experience. In this tutorial, we will learn how to efficiently track and process those changes using `KeyValueDiffer`.
