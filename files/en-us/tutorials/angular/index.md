@@ -11,3 +11,4 @@ title: Angular Tutorials | indepth.dev
 5. [Inject environment variables](/tutorials/angular/inject-environment-variables)
 6. [How to manage object in Angular FormControl](/tutorials/angular/object-in-formcontrol)
 7. [How to track changes in ngDoCheck with KeyValueDiffer](/tutorials/angular/track-changes-in-ngdocheck-with-keyvaluediffers)
+8. [Complete guide to ngFor directive in Angular](/tutorials/angular/complete-guide-to-ngfor-directive)
