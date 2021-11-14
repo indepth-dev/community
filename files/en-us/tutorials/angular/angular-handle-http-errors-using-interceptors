@@ -1,4 +1,12 @@
-# Angular - handle HTTP errors using interceptors
+'---
+title: Angular - handle HTTP errors using interceptors - Angular Tutorials | indepth.dev
+author_name: Maria Zayed
+author_link: https://twitter.com/mariawzayed
+discussion_link: #203
+display_name: Angular - handle HTTP errors using interceptors
+---'
+
+# **Angular - handle HTTP errors using interceptors**
 HTTP errors are common in Angular while making an HTTP request, it’s a good practice to handle these errors without hampering the user’s experience. In this article, we’ll discuss three ways of dealing with such cases
 <br>
 First things first, let’s understand the error interceptor.
@@ -8,7 +16,7 @@ An error interceptor is a special type of interceptor which is used for handling
 <br>
 Let’s see the error interceptor in practice.
 <br>
-### Project Setup.
+## Project Setup.
 First of all, let’s create a new project using the *ng new <project-name>* command (I named the project http-interceptor).
 After creating the project successfully, let's create the needed components & services. Run the following commands:
 * ng g c components/demo-component (to create a new component named demo)
@@ -81,7 +89,7 @@ export class ApiService {
 <br>
 At this point, it’s a typical HTTP request. NOW, let’s start with the fun part.
 
-### Use HTTP Interceptor
+## Use HTTP Interceptor
 Now, let’s dive deep into the interesting part. First, let’s take a look at the error-catching.interceptor.ts file
 <br>
 Notice that it implements the HttpInterceptor interface, which forces us to implement the intercept function which identifies and handles a given HTTP request.
