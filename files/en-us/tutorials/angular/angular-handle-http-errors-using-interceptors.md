@@ -102,8 +102,8 @@ What about the intercept function parameters?
 * next – The next interceptor in the chain, or the backend if no interceptors remain in the chain.
 * Returns: an observable of the event stream.
   
-  Now let’s add our touch.
-  Take a look at the next code:
+Now let’s add our touch.
+Take a look at the next code:
   
 ```javascript
 import {Injectable} from '@angular/core';
@@ -224,7 +224,7 @@ HttpInterceptors is a great tool for modern applications, it has great benefits.
 * Scalability — this point is, kind of, linked to the first point in a way that it provides an extension to the idea stated earlier. If the code is reusable then it automatically makes sense that it will be a lot easier to scale the code and its design.
 * Better service layer — since we can handle the related activities using interceptors, we do not need to pollute the service layer with handling that other stuff. This way, the service layer will be clean, to the point, and will only do what it is responsible for doing.
 
-## References:
+## References
 
 [How to split http interceptors between multiple backends](https://indepth.dev/posts/1455/how-to-split-http-interceptors-between-multiple-backends)
 
