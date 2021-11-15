@@ -20,15 +20,15 @@ Let’s see the error interceptor in practice.
 First of all, let’s create a new project using the *ng new <project-name>* command (I named the project http-interceptor).
 After creating the project successfully, let's create the needed components & services. Run the following commands:
 * ng g c components/demo-component (to create a new component named demo)
-* ng g s services/api (to create an api service) 
+* ng g s services/api (to create an api service)
 * ng g interceptor interceptors/error-catching (to create an error-catching interceptor)
-After running the above commands you should get a project structure like this.
-<br>
-![2](https://user-images.githubusercontent.com/27064594/141654079-a5575cdc-cc4f-4830-9a88-2671059aeb41.PNG)
-<br>
-Clean the *app.component.hrml* and add the *<app-demo-component></app-demo-component>* tag
-In the demo-component.component.html add this piece of code
-<br>
+  After running the above commands you should get a project structure like this.
+  <br>
+  ![2](https://user-images.githubusercontent.com/27064594/141654079-a5575cdc-cc4f-4830-9a88-2671059aeb41.PNG)
+  <br>
+  Clean the *app.component.hrml* and add the *<app-demo-component></app-demo-component>* tag
+  In the demo-component.component.html add this piece of code
+  <br>
 ```javascript
 <button (click)="getData()">Get Data</button>
 <div *ngIf="data">{{data}}</div>
@@ -43,25 +43,25 @@ import {Component, OnInit} from '@angular/core';
 import {ApiService} from "../../services/api.service";
 
 @Component({
-  selector: 'app-demo-component',
-  templateUrl: './demo-component.component.html',
-  styleUrls: ['./demo-component.component.scss']
+selector: 'app-demo-component',
+templateUrl: './demo-component.component.html',
+styleUrls: ['./demo-component.component.scss']
 })
 export class DemoComponentComponent implements OnInit {
 
-  data = ""
+data = ""
 
-  constructor(private apiService: ApiService) {
-  }
+constructor(private apiService: ApiService) {
+}
 
-  ngOnInit(): void {
-  }
+ngOnInit(): void {
+}
 
-  getData() {
-     this.apiService.getData().subscribe(res => {
-        this.data = JSON.stringify(res)
-     })
-  }
+getData() {
+this.apiService.getData().subscribe(res => {
+this.data = JSON.stringify(res)
+})
+}
 }
 ```
 <br>
@@ -94,14 +94,14 @@ Now, let’s dive deep into the interesting part. First, let’s take a look at 
 <br>
 Notice that it implements the HttpInterceptor interface, which forces us to implement the intercept function which identifies and handles a given HTTP request.
 <br>
-What about the intercept function parameters? 
+What about the intercept function parameters?
 * req – The outgoing request object to handle.
 * next – The next interceptor in the chain, or the backend if no interceptors remain in the chain.
 * Returns: an observable of the event stream.
-<br>
-Now let’s add our touch.
-Take a look at the next code:
-<br>
+  <br>
+  Now let’s add our touch.
+  Take a look at the next code:
+  <br>
 ```javascript
 import {Injectable} from '@angular/core';
 import {HttpErrorResponse, HttpEvent, HttpHandler, HttpInterceptor, HttpRequest} from '@angular/common/http';
@@ -168,11 +168,11 @@ import {catchError, map} from "rxjs/operators";
 @Injectable()
 export class ErrorCatchingInterceptor implements HttpInterceptor {
 
-  constructor() {
-  }
+constructor() {
+}
 
-  intercept(request: HttpRequest<unknown>, next: HttpHandler): Observable<HttpEvent<unknown>> {
-     console.log("Passed through the interceptor in request");
+intercept(request: HttpRequest<unknown>, next: HttpHandler): Observable<HttpEvent<unknown>> {
+console.log("Passed through the interceptor in request");
 
      return next.handle(request)
            .pipe(
@@ -193,7 +193,7 @@ export class ErrorCatchingInterceptor implements HttpInterceptor {
                     return throwError(errorMsg);
                  })
            )
-  }
+}
 }
 ```
 <br>
