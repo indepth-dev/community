@@ -1,10 +1,10 @@
-'---
+---
 title: Angular - handle HTTP errors using interceptors - Angular Tutorials | indepth.dev
 author_name: Maria Zayed
 author_link: https://twitter.com/mariawzayed
 discussion_link: #203
 display_name: Angular - handle HTTP errors using interceptors
----'
+---
 
 # **Angular - handle HTTP errors using interceptors**
 HTTP errors are common in Angular while making an HTTP request, it’s a good practice to handle these errors without hampering the user’s experience. In this article, we’ll discuss three ways of dealing with such cases
