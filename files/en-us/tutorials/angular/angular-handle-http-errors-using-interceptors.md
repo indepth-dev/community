@@ -29,8 +29,7 @@ After creating the project successfully, let's create the needed components & se
   ![2](https://user-images.githubusercontent.com/27064594/141654079-a5575cdc-cc4f-4830-9a88-2671059aeb41.PNG)
   
 
-  Clean the `app.component.html `and add the `<app-demo-component></app-demo-component>` tag
-  In the `demo-component.component.html` add this piece of code:
+Clean the `app.component.html `and add the `<app-demo-component></app-demo-component>` tag in the `demo-component.component.html` add this piece of code:
   
 ```javascript
 <button (click)="getData()">Get Data</button>
@@ -63,8 +62,8 @@ ngOnInit(): void {
 getData() {
 this.apiService.getData().subscribe(res => {
 this.data = JSON.stringify(res)
-})
-}
+    })
+  }
 }
 ```
 
@@ -102,8 +101,7 @@ What about the intercept function parameters?
 * next – The next interceptor in the chain, or the backend if no interceptors remain in the chain.
 * Returns: an observable of the event stream.
   
-Now let’s add our touch.
-Take a look at the next code:
+Now let’s add our touch. Take a look at the next code:
   
 ```javascript
 import {Injectable} from '@angular/core';
@@ -155,6 +153,7 @@ Now, let’s use the interceptor file in our project. We will add it to the prov
 ],
 ...
 })
+
 export class AppModule {
 }
 ```
@@ -206,6 +205,7 @@ console.log("Passed through the interceptor in request");
 ```
 
 You should see the following output:
+
 ![3](https://user-images.githubusercontent.com/27064594/141654269-2689e1e6-3753-41ea-ab5a-4d59e2c5b54d.PNG)
 
 Now, let’s break the URL to make the request fail.
