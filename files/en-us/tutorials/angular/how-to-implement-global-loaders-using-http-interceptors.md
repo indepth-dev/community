@@ -86,7 +86,7 @@ Now we should be able to use the angular material spinner in our `loader.compone
 
 Now we can test it by importing the loader component selector in `app.component.html`. Remove everything in `app.component.html` and add the `<app-loader></app-loader>` tag.
 
-### Using the loader service
+## Using the loader service
 The idea behind the loader service is to expose a Subject with the name `isVisible`, to whom we can emit true/false values from the interceptor and listen for changes from our loader component.
 
 In case you are not familiar with the Subject, it’s a special type of Observable that can act both as Observable and Observer at the same time. You can learn more about it [here](https://indepth.dev/reference/rxjs/subjects) or from the official [docs](https://rxjs.dev/guide/subject)
@@ -119,7 +119,7 @@ export class LoaderService {
 
 Basically, we are creating a new variable isLoading with type Subject that expects boolean data and two methods (show and hide) that push data to the Subject.
 
-### Using the interceptor
+## Using the interceptor
 In the `loader.interceptor.ts` file add the following code
 
 ```javascript
@@ -185,7 +185,7 @@ export class AppModule {
 }
 ```
 
-#### Modify the loader component to use the loader service
+## Modify the loader component to use the loader service
 As we don’t want to show the spinner non-stop, we will put the whole loader.component.html in `*ngIf` and use the loader service to get the correct state:
 
 ```javascript
