@@ -13,3 +13,4 @@ title: Angular Tutorials | indepth.dev
 7. [How to track changes in ngDoCheck with KeyValueDiffer](/tutorials/angular/track-changes-in-ngdocheck-with-keyvaluediffers)
 8. [Complete guide to ngFor directive in Angular](/tutorials/angular/complete-guide-to-ngfor-directive)
 9. [Handle HTTP errors using interceptors](/tutorials/angular/angular-handle-http-errors-using-interceptors)
+10. [How to implement global loaders using HTTP Interceptors](/tutorials/angular/how-to-implement-global-loaders-using-http-interceptors)
