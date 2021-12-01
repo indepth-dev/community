@@ -60,7 +60,7 @@ With that, once the routes were restructured now you see this welcome page conte
 
 If I select a product I also do see those product details so those detail routes also work and therefore a simple app using routes like this can easily be updated to version 6 by replacing the switch with routes and moving the to be loaded component into a new element prop.
 
-##Github Repo Link
+## Github Repo Link
 
 https://github.com/imran-farooq7/react-router-v6-update
 
