@@ -2,7 +2,7 @@
 title: How to use ngx-formly in Angular - Angular Tutorials | indepth.dev
 author_name: Varvara Sandakova
 author_link: https://twitter.com/varvarasandako1
-discussion_link: https://github.com/indepth-dev/community/discussions/217
+discussion_link: https://github.com/indepth-dev/community/discussions/225
 display_name: How to use ngx-formly in Angular
 ---
 # **How to use ngx-formly in Angular**
