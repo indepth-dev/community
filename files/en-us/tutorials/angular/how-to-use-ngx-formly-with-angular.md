@@ -22,7 +22,7 @@ There are some valuable features of ngx-formly:
 
 Our form will look like this:
 
-![](https://images.indepth.dev.fra1.digitaloceanspaces.com/tutorials/angular/how-to-use-ngx-formly-in-angular/tutorial-ngx-formly-form.png)
+![](https://images.indepth.dev/tutorials/angular/how-to-use-ngx-formly-in-angular/tutorial-ngx-formly-form.png)
 
 If you are curious to learn more about how to build a reusable and reactive form in Angular, check out this article [here](https://indepth.dev/posts/1415/implementing-reusable-and-reactive-forms-in-angular-2)
 
@@ -296,7 +296,7 @@ public onSubmit() {
 
 As a result, when you press submit button you can see in the console the next `JSON`:
 
-![](https://images.indepth.dev.fra1.digitaloceanspaces.com/tutorials/angular/how-to-use-ngx-formly-in-angular/tutorial-ngx-formly-json.png)
+![](https://images.indepth.dev/tutorials/angular/how-to-use-ngx-formly-in-angular/tutorial-ngx-formly-json.png)
 
 Congratulations, we generate a form automatically using ngx-formly. Full example of the project you can find on my [Github](https://github.com/VarvaraSandakova/formly-tutorial).
 
@@ -306,7 +306,7 @@ If you want to take a deeper look at the source code of ngx-formly you would see
 <formly-form [form]="form" [fields]="fields" [model]="model" [options]="options" ></formly-form>
 ```
 
-![](https://images.indepth.dev.fra1.digitaloceanspaces.com/tutorials/angular/how-to-use-ngx-formly-in-angular/tutorial-ngx-formly-angular-source.png)
+![](https://images.indepth.dev/tutorials/angular/how-to-use-ngx-formly-in-angular/tutorial-ngx-formly-angular-source.png)
 There are several points that I want to notice from this screenshot:
 
 - `FormlyForm` class implements Angular hooks (`DoCheck, OnChanges, OnDestroy`) for close interaction between library and Angular
