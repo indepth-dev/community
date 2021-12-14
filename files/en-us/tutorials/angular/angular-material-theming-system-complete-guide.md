@@ -1,9 +1,9 @@
 ---
-title: Angular Material Theming System Complete Guide - Angular Tutorials | indepth.dev
+title: Angular Material Theming System - Complete Guide - Angular Tutorials | indepth.dev
 author_name: Dharmen Shah
 author_link: https://twitter.com/shhdharmen
 discussion_link: https://github.com/indepth-dev/community/discussions/228
-display_name: Angular Material Theming System: Complete Guide
+display_name: Angular Material Theming System - Complete Guide
 ---
 
 # Angular Material Theming System: Complete Guide
