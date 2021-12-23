@@ -23,8 +23,6 @@ The following image describes the flow explained in previous paragraphs.
 
 ![WebSocket flow](https://i.imgur.com/x3keabd.png "WebSocket flow")
 
-![WebSocket headers](https://i.imgur.com/wwRBCc3.png "WebSocket headers")
-
 ## WebSocket Server
 
 It’s a TCP application that can be written in any server-side programming language. Its function will be to manage connections, sending and receiving messages. It’s recommended to separate these servers from other applications and use a reverse proxy.
