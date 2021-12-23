@@ -239,7 +239,7 @@ In the console of our browser we can validate the sending of the message
 
 The application will look like this:
 
-![Network tab](https://i.imgur.com/2j0thAM.gif "Network tab")
+![Result](https://i.imgur.com/2j0thAM.gif "Result")
 
 ## Summary
 
