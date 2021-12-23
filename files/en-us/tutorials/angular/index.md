@@ -16,4 +16,4 @@ title: Angular Tutorials | indepth.dev
 10. [How to implement global loaders using HTTP Interceptors](/tutorials/angular/how-to-implement-global-loaders-using-http-interceptors)
 11. [How to use ngx-formly in Angular](/tutorials/angular/how-to-use-ngx-formly-with-angular)
 12. [Angular Material Theming System: Complete Guide](/tutorials/angular/angular-material-theming-system-complete-guide)
-13. [How to implement WebSockets in Angular project](/files/en-us/tutorials/angular/how-to-implement-websockets-in-angular-project)
+13. [How to implement WebSockets in Angular project](/tutorials/angular/how-to-implement-websockets-in-angular-project)
