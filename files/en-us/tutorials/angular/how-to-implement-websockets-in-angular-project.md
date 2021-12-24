@@ -23,8 +23,6 @@ The following image describes the flow explained in previous paragraphs.
 
 ![WebSocket flow](https://i.imgur.com/x3keabd.png "WebSocket flow")
 
-![WebSocket headers](https://i.imgur.com/wwRBCc3.png "WebSocket headers")
-
 ## WebSocket Server
 
 It’s a TCP application that can be written in any server-side programming language. Its function will be to manage connections, sending and receiving messages. It’s recommended to separate these servers from other applications and use a reverse proxy.
@@ -241,7 +239,7 @@ In the console of our browser we can validate the sending of the message
 
 The application will look like this:
 
-![Network tab](https://i.imgur.com/2j0thAM.gif "Network tab")
+![Result](https://i.imgur.com/2j0thAM.gif "Result")
 
 ## Summary
 
@@ -252,5 +250,3 @@ The WebSocket API allows us to communicate between client and server through mes
 [Writing WebSocket client applications](https://developer.mozilla.org/en-US/docs/Web/API/WebSockets_API/Writing_WebSocket_client_applications)
 [Writing WebSocket servers](https://developer.mozilla.org/en/docs/Web/API/WebSockets_API/Writing_WebSocket_servers)
 [Protocol upgrade mechanism](https://developer.mozilla.org/en/docs/Web/HTTP/Protocol_upgrade_mechanism)
-
-
