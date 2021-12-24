@@ -1,3 +1,11 @@
+---
+title: Angular Material Menu: Nested Menu using Dynamic Data - Angular Tutorials | indepth.dev
+author_name: Dharmen Shah
+author_link: https://twitter.com/shhdharmen
+discussion_link: https://github.com/indepth-dev/community/discussions/235
+display_name: Angular Material Menu: Nested Menu using Dynamic Data
+---
+
 # Angular Material Menu: Nested Menu using Dynamic Data
 
 > The Angular Material Menu is a floating panel containing a list of options. In this tutorial, we will learn how we can create nested menus from dynamic data.
