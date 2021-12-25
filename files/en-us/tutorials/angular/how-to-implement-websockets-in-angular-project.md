@@ -31,19 +31,19 @@ You can use this Node + Express WebSocket Server for angular client implementati
 
 ## Implementation
 
-We will create an angular project using the command `ng new`, in this case the name of the project will be `socketrv`, likewise we create 2 services `socket.service.ts` and `websocket.service.ts` inside a folder called services.
+We will create an angular project using the command `ng new`, in this case the name of the project will be `socketrv`, likewise we create `websocket.service.ts` inside a folder called services.
 
-![Project folder structure](https://i.imgur.com/HvISMcL.png "Project folder structure")
+![Project folder structure](https://i.imgur.com/ZkomsMG.png "Project folder structure")
 
 ## WebSocketService
 
-We will use a service called `WebSocketService` which will allow us to connect to the WebSocket server. `WebSocketService` class has following overall structure:
+We will create a service called `WebSocketService` which will allow us to connect to the WebSocket server. `WebSocketService` class has following overall structure:
 A list with bullet points:
 
 
 1. Properties
 a) subject: Is an instance of AnonymousSubject class with MessageEvent property. The AnonymousSubject class allows extending a Subject by defining the source and destination observables.
-b) message: Every Subject is an Observable and an Observer. We'll subscribe to this Subject, and we'll be able to call next to feed values as well as error and complete. 
+b) message:  Is an instance of Subject class. Every Subject is an Observable and an Observer. We'll subscribe to this Subject, and we'll be able to call next to feed values as well as error and complete. 
 2. Methods
 a) connect: This method validates if subject property doesn’t exist and then calls create method for creating the subject.
 b) create: This method creates the AnonymousSubject that will be used for subscriptions. 
@@ -247,6 +247,6 @@ The WebSocket API allows us to communicate between client and server through mes
 
 ## References
 
-https://developer.mozilla.org/en-US/docs/Web/API/WebSockets_API/Writing_WebSocket_client_applications
-https://developer.mozilla.org/en/docs/Web/API/WebSockets_API/Writing_WebSocket_servers
-https://developer.mozilla.org/en/docs/Web/HTTP/Protocol_upgrade_mechanism
+[Writing WebSocket client applications](https://developer.mozilla.org/en-US/docs/Web/API/WebSockets_API/Writing_WebSocket_client_applications)
+[Writing WebSocket servers](https://developer.mozilla.org/en/docs/Web/API/WebSockets_API/Writing_WebSocket_servers)
+[Protocol upgrade mechanism](https://developer.mozilla.org/en/docs/Web/HTTP/Protocol_upgrade_mechanism)
