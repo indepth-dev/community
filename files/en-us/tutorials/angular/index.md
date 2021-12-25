@@ -17,3 +17,4 @@ title: Angular Tutorials | indepth.dev
 11. [How to use ngx-formly in Angular](/tutorials/angular/how-to-use-ngx-formly-with-angular)
 12. [Angular Material Theming System: Complete Guide](/tutorials/angular/angular-material-theming-system-complete-guide)
 13. [How to implement WebSockets in Angular project](/tutorials/angular/how-to-implement-websockets-in-angular-project)
+14. [Angular Material Menu: Nested Menu using Dynamic Data](/tutorials/angular/angular-material-nested-menu-dynamic-data)
