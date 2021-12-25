@@ -1,9 +1,9 @@
 ---
-title: Angular Material Menu: Nested Menu using Dynamic Data - Angular Tutorials | indepth.dev
+title: Angular Material Menu - Nested Menu using Dynamic Data - Angular Tutorials | indepth.dev
 author_name: Dharmen Shah
 author_link: https://twitter.com/shhdharmen
 discussion_link: https://github.com/indepth-dev/community/discussions/235
-display_name: Angular Material Menu: Nested Menu using Dynamic Data
+display_name: Angular Material Menu - Nested Menu using Dynamic Data
 ---
 
 # Angular Material Menu: Nested Menu using Dynamic Data
