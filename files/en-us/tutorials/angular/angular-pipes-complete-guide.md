@@ -1,9 +1,9 @@
 ---
-title: Angular Pipes: Complete Guide - Angular Tutorials | indepth.dev
+title: Angular Pipes - Complete Guide - Angular Tutorials | indepth.dev
 author_name: Maria Zayed
 author_link: https://twitter.com/mariawzayed
 discussion_link:  https://github.com/indepth-dev/community/discussions/241
-display_name: Angular Pipes: Complete Guide
+display_name: Angular Pipes - Complete Guide
 ---
 
 # **Angular Pipes: Complete Guide**
