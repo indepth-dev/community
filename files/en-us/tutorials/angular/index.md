@@ -18,3 +18,4 @@ title: Angular Tutorials | indepth.dev
 12. [Angular Material Theming System: Complete Guide](/tutorials/angular/angular-material-theming-system-complete-guide)
 13. [How to implement WebSockets in Angular project](/tutorials/angular/how-to-implement-websockets-in-angular-project)
 14. [Angular Material Menu: Nested Menu using Dynamic Data](/tutorials/angular/angular-material-nested-menu-dynamic-data)
+15. [Angular Pipes: Complete Guide](/tutorials/angular/angular-pipes-complete-guide)
