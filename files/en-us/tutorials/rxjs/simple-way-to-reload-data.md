@@ -132,7 +132,6 @@ class UserService {
       this.reloadSubj.next();
     }
 }
-view raw
 ```
 Let's take a look at it in action:
 
