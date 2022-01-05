@@ -8,7 +8,7 @@ display_name: The simple way to reload data using RxJS
 
 # **The simple way to reload data using RxJS**
 
-Most of the time, we have to load data from the server. To perform the action client usually sends requests along with predefined data. Such data usually takes from the route, browser storage, or from attributes in the case when it's a component. To load the user details we need to have userId, to load card details we need to have cardId, and so on. But what if you already load the data and you just need to reload without passing the same predefined data again and again. Sounds like a trivial task, right?
+Most of the time, we have to load data from the server. To perform the action client usually sends requests along with predefined data. Such data usually takes from the route, browser storage, or from attributes in the case when it's a component. To load the user details we need to have `userId`, to load card details we need to have `cardId`, and so on. But what if you already load the data and you just need to reload without passing the same predefined data again and again. Sounds like a trivial task, right?
 
 It depends.
 
@@ -170,7 +170,7 @@ function reload(selector: Function = Identity) {
 }
 ```
 
-Now, instead of the scan we can use one line reload operator and it will take only one line:
+Now, instead of the `scan` we can use one line `reload` operator and it will take only one line:
 
 ```typescript
 class UserService {
