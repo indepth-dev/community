@@ -20,3 +20,4 @@ title: Angular Tutorials | indepth.dev
 14. [Angular Material Menu: Nested Menu using Dynamic Data](/tutorials/angular/angular-material-nested-menu-dynamic-data)
 15. [Angular Pipes: Complete Guide](/tutorials/angular/angular-pipes-complete-guide)
 16. [Authentication using the Amazon Cognito to an Angular application](/tutorials/angular/authentication-using-the-amazon-cognito-to-an-angular-application)
+17. [No div around: writing semantic progress indicators in Angular](/tutorials/angular/no-div-arounds-writing-semantic-progress-indicators-in-angular)
