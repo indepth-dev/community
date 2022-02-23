@@ -1,9 +1,9 @@
 ---
-title: No div around: writing semantic progress indicators in Angular - Angular Tutorials | indepth.dev
+title: No div around - writing semantic progress indicators in Angular - Angular Tutorials | indepth.dev
 author_name: Nikita Barsukov
 author_link: https://twitter.com/nsbarsukov
 discussion_link: https://github.com/indepth-dev/community/discussions/254
-display_name: No div around: writing semantic progress indicators in Angular
+display_name: No div around - writing semantic progress indicators in Angular
 ---
 
 # No div around: writing semantic progress indicators in Angular
