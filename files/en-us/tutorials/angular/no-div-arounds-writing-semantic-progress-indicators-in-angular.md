@@ -6,7 +6,7 @@ discussion_link: https://github.com/indepth-dev/community/discussions/254
 display_name: No div around - writing semantic progress indicators in Angular
 ---
 
-# No div around: writing semantic progress indicators in Angular
+# No div around - writing semantic progress indicators in Angular
 
 > In this article, I will show how to develop semantic Angular-components
 [ProgressBar](https://taiga-ui.dev/components/progress-bar) and [ProgressCircle](https://taiga-ui.dev/components/progress-circle).
