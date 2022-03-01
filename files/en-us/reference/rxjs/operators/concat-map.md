@@ -15,13 +15,13 @@ Use this operator if the order of emissions is important and you want to first s
 
 The operator works in the following way:
 
-1. Subscribe to a source observable
-2. When a new value arrives from a source observable, execute a `map` function that returns an inner observable
-3. Subscribe to this inner observable
-4. When this inner observable emits a value, pass it down to an observer
-5. When a new value arrives from a source observable, execute a `map` function that returns an inner observable
-6. Put this inner observable in a queue
-7. Once the current source observable completes, subscribe to the next source observable in the queue
+1. Subscribe to a source observable.
+2. When a new value arrives from a source observable, execute a `map` function that returns an inner observable.
+3. Subscribe to this inner observable.
+4. When this inner observable emits a value, pass it down to an observer.
+5. When a new value arrives from a source observable, execute a `map` function that returns an inner observable.
+6. Put this inner observable in a queue.
+7. Once the current inner observable (refer step 3) completes, subscribe to the next inner observable in the queue (refer step 6).
 8. Only after all inner observables complete, send the complete notification to the observer.
 9. If any of the source observables throws an error, send the error notification to the observer.
 
