@@ -1,3 +1,11 @@
+---
+title: Angular applications SEO improvement with social media customization - Angular Tutorials | indepth.dev
+author_name: Maria Zayed
+author_link: https://twitter.com/mariawzayed
+discussion_link:  https://github.com/indepth-dev/community/discussions/259
+display_name: Angular applications SEO improvement with social media customization
+---
+
 # Introduction
 [Scully](https://scully.io/) is a static site generator for Angular projects which utilizes all of Angular's power but still gives all the SEO benefits that static sites offer.
 
