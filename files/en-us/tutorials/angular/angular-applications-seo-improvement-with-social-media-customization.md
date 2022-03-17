@@ -11,16 +11,16 @@ display_name: Angular applications SEO improvement with social media customizati
 
 In this article, we will understand how the Google search algorithm works, then how we can improve the [SEO](https://yoast.com/what-is-seo/) in Angular apps using Scully, then how we can customize Angular apps for social media, then an optional section on how we could deploy a static site in Firebase.
 
-# Understanding Google Search
+## Understanding Google Search
 Google follows three basic steps to generate results from web pages:
 
-## Crawling
+### Crawling
 Once Google discovers a page URL, it visits or crawls, the page to find out what's on it (using bots). Google renders the page and analyzes both the text and non-text content and overall visual layout to decide where it should appear in search results. The better that Google can understand your site, the better they can match it to people who are looking for your content.
 
-## Indexing
+### Indexing
 After a page is discovered, Google tries to understand what the page is about. This process is called indexing. Google analyzes the content of the page, catalogs images and video files embedded on the page, and otherwise tries to understand the page. This information is stored in the Google index, a huge database stored in many computers.
 
-## Serving (and Ranking)
+### Serving (and Ranking)
 When a user types a query, Google tries to find the most relevant answer from its index based on many factors. Google tries to determine the highest quality answers, and factor in other considerations that will provide the best user experience and most appropriate answer, by considering things such as the user's location, language, and device (desktop or phone).
 
 For example, searching for "bicycle repair shops" would show different answers to a user in Paris than it would to a user in Hong Kong. Google doesn't accept payment to rank pages higher, and ranking is done programmatically.
@@ -149,7 +149,7 @@ export class AppRoutingModule {
 # Improving SEO in Angular apps
 Now that we know the three main steps Google uses to position search results, let's see what changes can be done to Angular apps to rank higher.
 
-First, we run the starter code and use browser’s `View page resource’ option.
+First, we run the starter code and use browser’s `View page resource` option.
 
 ![4](https://user-images.githubusercontent.com/27064594/156120138-efec0936-16c4-48a0-a6dc-b7ff835561cc.png)
 
@@ -488,11 +488,11 @@ firebase deploy
 **We made it!** Now, the deployed Angular app will have the amazing user experience that a SPA can give, and it will also have good SEO.
 
 # Further Reading
-[How Google Search Works (for beginners)](https://developers.google.com/search/docs/beginner/how-search-works)
-[Schema Markup 2022- SEO Best Practices](https://makewebbetter.com/blog/schema-markup-seo-best-practices/)
-[Understand how structured data works](https://developers.google.com/search/docs/advanced/structured-data/intro-structured-data)
-[Open Graph Meta Tags: Everything You Need to Know](https://ahrefs.com/blog/open-graph-meta-tags/)
-[A Guide to Share for Webmasters (for Facebook & Whatsapp)](https://developers.facebook.com/docs/sharing/webmasters/)
+* [How Google Search Works (for beginners)](https://developers.google.com/search/docs/beginner/how-search-works)
+* [Schema Markup 2022- SEO Best Practices](https://makewebbetter.com/blog/schema-markup-seo-best-practices/)
+* [Understand how structured data works](https://developers.google.com/search/docs/advanced/structured-data/intro-structured-data)
+* [Open Graph Meta Tags: Everything You Need to Know](https://ahrefs.com/blog/open-graph-meta-tags/)
+* [A Guide to Share for Webmasters (for Facebook & Whatsapp)](https://developers.facebook.com/docs/sharing/webmasters/)
 
 # Conclusion
 
