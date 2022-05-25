@@ -436,7 +436,7 @@ drawChart() {
         this.drawChart();
     }
 ```
-Again, there is a [sample project](https://github.com/flexmonster/pivot-angular/tree/master/src/app/examples/with-highcharts) you can look through to get the whole picture. 
+Again, there is a [sample project](https://github.com/flexmonster/pivot-angular/tree/master/src/app/examples/with-highcharts) with Highcharts integration so you can check yourself and the [GitHub repo with the whole project](https://github.com/YuliiaNikitina/MEANstackProject) to look through and get the overall picture. 
 
 ## Conclusion
 
