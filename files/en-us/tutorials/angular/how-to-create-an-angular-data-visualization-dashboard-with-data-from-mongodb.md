@@ -35,6 +35,8 @@ Another reason why I chose Flexmonster is that I can use Flexmonster CLI to conv
 
 In this tutorial, we will create both, client and server. Client using Angular and reporting libraries and server using Express.js and Node.js.
 
+
+
 ## Phase 1. Create Angular project with embedded data visualization tools
 Create an Angular app by running the following command in the console:
 
