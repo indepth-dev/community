@@ -3,7 +3,7 @@ title: InDepth Guide for Customizing Angular Material Button - Angular Tutorials
 author_name: Dharmen Shah
 author_link: https://twitter.com/shhdharmen
 discussion_link: https://github.com/indepth-dev/community/discussions/273
-display_name: InDepth Guide for Customizing Angular Material Button
+display_name: Angular Material Menu - Nested Menu using Dynamic Data
 ---
 
 # InDepth Guide for Customizing Angular Material Button
@@ -211,8 +211,8 @@ For template interpolation, your code may look like this:
 
 #### Cons
 
-1. Repetition: Above code is fine, but you will have to repeat the same lines and conditions at all places wherever you want to show `MatProgressSpinner` in buttons.
-2. Changes at all places: If you want to change something, for example size of `MatProgressSpinner`, you will have to find out all such instances and do the change.
+1. **Repetition:** Above code is fine, but you will have to repeat the same lines and conditions at all places wherever you want to show `MatProgressSpinner` in buttons.
+2. **Changes at all places:** If you want to change something, for example size of `MatProgressSpinner`, you will have to find out all such instances and do the change.
 
 ### Wrapper Component
 
@@ -235,15 +235,15 @@ export class AppButtonComponent {
 
 #### Pros
 
-1. Changes at all places: With the above, now you can use `app-button` everywhere to get the same button with `mat-spinner`.
-2. Reusability: And if you want to change anything, you just need to change in this component and it will reflect at all places.
-3. Customizations: As we are using component, we can make template customizations easily
+1. **Changes at all places:** With the above, now you can use `app-button` everywhere to get the same button with `mat-spinner`.
+2. **Reusability:** And if you want to change anything, you just need to change in this component and it will reflect at all places.
+3. **Customizations:** As we are using component, we can make template customizations easily
 
 #### Cons
 
-1. Native component properties: Let’s assume that at different places, we want to use different variants of the Angular Material button. Now for color, you can simply add one more input and get all the variants of color. But if you want to use different presentations, like `mat-flat-button` or `mat-icon-button`, things will start becoming more complex.
-2. Events: Apart from variants, you will also have to handle events, like `(click)`. You will have to propagate the click event using `@Output()` up to its parent component.
-3. Directive support: Angular Material button supports it’s own `MatTooltip` and `MatBadge` directives out of the box. To achieve support of all of the above in a wrapper component is not only difficult but complex and hard to maintain.
+1. **Native component properties:** Let’s assume that at different places, we want to use different variants of the Angular Material button. Now for color, you can simply add one more input and get all the variants of color. But if you want to use different presentations, like `mat-flat-button` or `mat-icon-button`, things will start becoming more complex.
+2. **Events:** Apart from variants, you will also have to handle events, like `(click)`. You will have to propagate the click event using `@Output()` up to its parent component.
+3. **Other directives' support:** Angular Material button supports it’s own `MatTooltip` and `MatBadge` directives out of the box. To achieve support of all of the above in a wrapper component is not only difficult but complex and hard to maintain.
 
 ### Directive
 
@@ -473,14 +473,14 @@ Let’s look at the above approach’s pros and cons.
 
 #### Pros
 
-1. Native component properties: As you can see in the output, the directive works with all variants of `MatButton`
-2. Events: Also, there is no need to write extra code handle event
-3. Directive support: As we used directive, other library directives’ support, like `MatBadge`, `MatTooltip` still exists
+1. **Native component properties:** As you can see in the output, the directive works with all variants of `MatButton`
+2. **Events:** Also, there is no need to write extra code handle event
+3. **Other directives' support:** As we used directive, other library directives’ support, like `MatBadge`, `MatTooltip` still exists
 
 #### Cons
 
-1. No template control: We do not have template control with this approach compared to wrapper component and inline template interpolation
-2. More DOM manipulation: As we do not have template control, we have to do every template change through DOM manipulation
+1. **No template control:** We do not have template control with this approach compared to wrapper component and inline template interpolation
+2. **More DOM manipulation:** As we do not have template control, we have to do every template change through DOM manipulation
 
 So, compared with template interpolation and wrapper components, the reusability without losing default features is the main and biggest advantage of this approach. And that’s why, one should try to achieve such customizations with usage of directive.
 
