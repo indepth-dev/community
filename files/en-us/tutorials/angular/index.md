@@ -22,3 +22,4 @@ title: Angular Tutorials | indepth.dev
 16. [Authentication using the Amazon Cognito to an Angular application](/tutorials/angular/authentication-using-the-amazon-cognito-to-an-angular-application)
 17. [Angular applications SEO improvement with social media customization](/tutorials/angular/angular-applications-seo-improvement-with-social-media-customization)
 18. [InDepth guide to repeat HTML elements multiple times — a short introduction to structural directives](/tutorials/angular/guide-to-repeat-HTML-elements-multiple-times)
+19. [InDepth Guide for Customizing Angular Material Button](/tutorials/angular/indepth-guide-for-customizing-angular-material-button)
