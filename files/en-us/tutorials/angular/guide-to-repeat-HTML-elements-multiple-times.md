@@ -67,11 +67,13 @@ There are use cases when the standard directives are not enough. Our projects of
 
 ## Render multiple elements based on a number
 
+
 We can think about a case where we would like to display a number of items. To make the example more specific, let us say that we want to display stars in some view, and the number of stars is dynamic, provided in some variable. 
 
 The view could look as follows:
 
 ![Image displaying repeated star elements in UI](https://i.imgur.com/eamXzSq.png)
+
 
 ### The NgFor approach
 
@@ -101,6 +103,7 @@ Notice that the array has empty items because it was only initialized with a siz
 This approach, using the `NgFor`, works as expected however it requires creating an array of a specific size, each time we want to repeat elements in the `HTML` — that is not ideal. NgFor has limited customization opportunities, so in this guide, we will propose a better implementation, that will be easier to reuse, and won’t produce code duplications. 
 
 ### Custom directive
+
 
 We are going to use structural directives to solve our main problem. So to repeatedly generate elements, as many times as we want. 
 
@@ -280,6 +283,7 @@ This section explains the concepts used in this guide by going in-depth into the
 
 ### Structural directives
 
+
 Directives in Angular can serve many purposes. They are divided into two groups, structural directives and attribute directives. In this guide, we will focus on the first group — which groups directives that changes the DOM structure.
 
 Structural directives define the DOM structure and that is exactly what we need. We want to add elements to the DOM.
@@ -327,6 +331,7 @@ The `<ng-template>` element is the Angular template, and the reference to that e
 
 ### The NgFor
 
+
 Our `Repeat` directive has a lot of similarities with the popular `NgFor` directive so let’s quickly check for differences. It’s always good to know what are the advantages and disadvantages of the approach you choose to implement. You may also use this information to apply some changes to our directive based on the `NgFor` implementation.
 
 The main difference is that `NgFor` renders elements in the `ngDoCheck` hook. It is very important for performance reasons. `NgFor` has a mechanism for tracking rendered elements by using the special function `trackBy`.  So in order to efficiently render elements, Angular checks object in the Array and decide whether to re-render them or not. If identity is positive, then Angular will not clear the element and render it once again, it will simply do nothing for this particular element. 
@@ -334,6 +339,7 @@ The main difference is that `NgFor` renders elements in the `ngDoCheck` hook. It
 Here is an [InDepth guide](https://indepth.dev/tutorials/angular/complete-guide-to-ngfor-directive) about `NgFor`, which explains this concept in detail. 
 
 ### Template variables - bonus feature
+
 
 Our directive works fine, but there is one more thing that could be improved. When using the `NgFor`, we have access to some helpful variables — for instance, the index of the element. This could be useful when we would like to apply some dynamic features for specific indexes. For example, we may want to set some styling for every star, after the third one, or change the content slightly after the fifth star. So the information about the index could be quite useful. Let’s implement this feature into our directive. 
 
@@ -358,6 +364,7 @@ for (let i = 0; i < this.amount; i++) {
 We are using the parameter called `$implicit` to allow anyone who uses our directive to choose its own name for the template variable. In our example from above, we assigned it to the `let index`.
 
 ## Summary
+
 
 Structural directives are very powerful and can be extremely useful when it comes to modifying the DOM structure. We may naturally think about solving problems in our components, but often it would be easier if we put directives in the equation. 
 
