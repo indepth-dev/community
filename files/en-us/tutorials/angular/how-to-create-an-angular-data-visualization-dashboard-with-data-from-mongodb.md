@@ -6,7 +6,7 @@ discussion_link:  https://github.com/indepth-dev/community/discussions/267
 display_name: How to create an Angular data visualization dashboard with data from MongoDB - Complete Guide
 ---
 
-# **How to create an Angular data visualization dashboard with data from MongoDB**
+# How to create an Angular data visualization dashboard with data from MongoDB
 
 Choosing a stack for the project, especially a web project, is always quite a hard process for every developer. Stick with the one you are good and confident at? Or try a new promising framework but there is a chance it will just fail your expectations?
 
@@ -20,7 +20,7 @@ So here is what I usually use for my web dashboards:
 
 Last two libraries are not free but have a 30 days free trial.
 
-This time I went through an interesting article about MEAN stack. **MEAN** stack is an acronym for **M**ongoDB, **E**xpressJS, **A**ngularJS, and **N**odeJS. More information you can check in this [web development with MEAN stack article](https://www.webdatarocks.com/blog/web-development-with-mean-stack/).
+This time I went through an interesting article about MEAN stack. **MEAN** stack is an acronym for **MongoDB**, **ExpressJS**, **AngularJS**, and **NodeJS**. More information you can check in this [web development with MEAN stack article](https://www.webdatarocks.com/blog/web-development-with-mean-stack/).
 
 I had used Angular before, so I decided to give a try to this collection of JavaScript technologies. And it went pretty well!
 
@@ -291,7 +291,7 @@ That's all the configurations we need to set a server for this project. I will n
 So now we have the server, but it doesn’t work as we didn’t define a mongoController.js properly.
 
 You will need to create this separate .ts controller file for the request routing. Firstly, install Flexmonster MongoDB Connector and the MongoDB driver in it and then configure the module itself:
-​
+
 ```ts
 //flexmonster-project/src/mongoController.ts
 const mongo = require('express').Router();
@@ -338,7 +338,7 @@ public pivotReport = {
 ```
 Great! Now we can connect to MongoDB. But we will not understand what Flexmonster Pivot wants from us because we don’t have proper handlers for the requests. Let's fix that.
 
-There are 4 request types we need to know how to handle while working with a pivot table: /fields request, /members request, /select request, and optional /handshake request.
+There are 4 request types we need to know how to handle while working with a pivot table: fields request, members request, select request, and optional handshake request.
 
 The field request will help build a Field List in a pivot grid. With the members' request response Flexmonster will be able to select a string field for rows or columns and retrieve its members. When Flexmonster successfully receives the response to select request, a pivot table with the received data is shown. The “handshake” will help a client to understand if the custom data source API is the same for it and the server.
 
