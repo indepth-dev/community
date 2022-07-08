@@ -48,7 +48,7 @@ Next, we will add Flexmonster. For that, first install Flexmonster CLI and then 
 Now you have Flexmonster Angular wrapper in your project. Let's add the pivot grid to the main page.
 To do it, you shall import several things:
 1. `FlexmonsterPivotModule` into `src/app/app.module.ts`: 
-```html
+```ts
 import { FlexmonsterPivotModule } from 'ng-flexmonster';
 
 @NgModule({
@@ -61,22 +61,22 @@ import { FlexmonsterPivotModule } from 'ng-flexmonster';
 })
 ```
 2. Flexmonster styles (e.g., in `styles.css`):
-```html
+```ts
 @import "flexmonster/flexmonster.min.css"
 ```
 3.  and `FlexmonsterPivot` from `ng-flexmonster` (e.g., in `app.component.ts`):
-```html
+```ts
 
 import { FlexmonsterPivot } from 'ng-flexmonster';
 ```
 Now you can insert the `fm-pivot` directive (e.g., in `app.component.html`):
-```html
+```ts
 <fm-pivot
     [report]="'https://cdn.flexmonster.com/reports/report.json'">
 </fm-pivot>
 ```
 The string in the report property links to a sample Flexmonster report Object in JSON file. It contains all the information about the future pivot table: how it will look, where the data will come from, which fields to show and how to display them. And it looks something like this:
-```html
+```ts
 {
     "dataSource": {
         "type": "json",
@@ -326,7 +326,7 @@ mongodb.MongoClient.connect(
 module.exports = mongo;
 ```
 Also don't forget to change the datasource in your report so it looks like this:
-```html
+```ts
 public pivotReport = {
     dataSource: {
  	   type: "api",
@@ -344,7 +344,7 @@ The field request will help build a Field List in a pivot grid. With the members
 
 The implementation of this handlers shall look like this:
 
-```html
+```ts
 mongo.post("/fields", async (req, res) => {
     try {
         const result = await _apiReference.getSchema(dbo, req.body.index);
@@ -396,7 +396,7 @@ Now we can add the final touch on our dashboard - charts and graphs.
 To add Highcharts to your analytical dashboard you will need to complete just a few steps because Flexmonster will work as a Connector between charts and data source so there is no need for their second connection. Basically the pivot will receive the data from the server, aggregate it and display it on the frontend.
 
 So the pivot table will aggregate the data and pass it to the charting library that will draw the needed chart type. We need to create an extra container for it right after the pivot container in your .html file. Like this:
-```html
+```ts
 <div>
     <fm-pivot #pivot [toolbar]="true" [shareReportConnection]="{url: 'https://olap.flexmonster.com:9500'}"
         [report]="'https://cdn.flexmonster.com/github/demo-report.json'" [height]="600"
@@ -411,14 +411,14 @@ So the pivot table will aggregate the data and pass it to the charting library t
 
 ```
 Then import Highcharts and the connector for tools communication:
-```html
+```ts
 import * as Highcharts from 'highcharts';
 // Importing Flexmonster's connector for Highcharts
 import "flexmonster/lib/flexmonster.highcharts.js";
 ```
 Then you will need to add the `reportcomplete` event (you can find it in the pivot parameters in the `.html` file); when it is triggered, the chart-drawing function is invoked. And of course the `drawChart()` function that will do the job.
 
-```html
+```ts
 drawChart() {
         this.pivot.flexmonster.highcharts?.getData(
             {
