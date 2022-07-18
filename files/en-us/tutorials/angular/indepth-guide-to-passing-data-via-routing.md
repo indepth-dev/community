@@ -314,7 +314,7 @@ goToNextStep(profileType: ProfileType) {
 
 The template is not that important in the case of this guide, so I won’t spend much time on it - but in case you were wondering how the function gets called, the template may look like the below:
 
-```tsx
+```html
 <h1>Please choose profile type</h1>
 
 <button (click)="goToNextStep(ProfileType.Person)"> Person </button>
