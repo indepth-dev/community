@@ -24,4 +24,4 @@ title: Angular Tutorials | indepth.dev
 18. [InDepth guide to repeat HTML elements multiple times — a short introduction to structural directives](/tutorials/angular/guide-to-repeat-HTML-elements-multiple-times)
 19. [InDepth Guide for Customizing Angular Material Button](/tutorials/angular/indepth-guide-for-customizing-angular-material-button)
 20. [How to create an Angular data visualization dashboard with data from MongoDB](/tutorials/angular/how-to-create-an-angular-data-visualization-dashboard-with-data-from-mongodb)
-
+21. [InDepth guide to passing data via routing](/tutorials/angular/indepth-guide-to-passing-data-via-routing)
