@@ -21,9 +21,9 @@ The operator works in the following way:
 4. When this inner observable emits a value, pass it down to an observer
 5. When a new value arrives from a source observable, execute a `map` function that returns an inner observable
 6. Put this inner observable in a queue
-7. Once the current source observable completes, subscribe to the next source observable in the queue
-8. Only after all inner observables complete, send the complete notification to the observer.
-9. If any of the source observables throws an error, send the error notification to the observer.
+7. Once the current inner observable completes, subscribe to the next inner observable in the queue
+8. Only after source observable completes and all inner observables complete, send the complete notification to the observer.
+9. If any of the inner observables throws an error, send the error notification to the observer.
 
 The following diagram demonstrates this sequence of steps:
 
