@@ -5,26 +5,23 @@ author_link: https://twitter.com/shhdharmen
 discussion_link: https://github.com/indepth-dev/community/discussions/280
 display_name: InDepth Guide for Creating Nested and Reusable Forms
 ---
+
 # InDepth Guide for Creating Nested and Reusable Forms
 
 In this tutorial you will learn how to create and use form-groups. And we will also learn how to achieve complete reliability by using the composite ControlValueAccessor.
 
-
 ## Introduction
 
-In web applications, we can have large forms, like account registration form, profile creation form, credit card form, address form, etc. These large forms generally have a set of fields which are repeated in them. 
+In web applications, we can have large forms, like account registration form, profile creation form, credit card form, address form, etc. These large forms generally have a set of fields which are repeated in them.
 
 For example, address fields are generally available in all the registration forms. In this tutorial, we will learn how to wrap such fields in a reusable form, so that it can be used as nested form any other form.
 
 In this tutorial, we will discuss 4 approaches to create a form and we will also look at pros and cons for each:
 
-
-
 1. How to create and use form-group
 2. How to create nested form-groups
 3. How to use child component with nested form-group
 4. How to create reusable form with Composite `ControlValueAccessor`
-
 
 ## How to create and use FormGroup
 
@@ -33,7 +30,6 @@ Forms typically contain several related controls. [Reactive forms](https://angul
 Just as a form control instance gives you control over a single input field, a form group instance tracks the form state of a group of form control instances (for example, a form). Each control in a form group instance is tracked by name when creating the form group.
 
 We will take an example of Profile form, which will have input fields for name, email, address lines, city, state, zip-code and country. The form-group for the same looks like below:
-
 
 ```typescript
 // src/app/simple-form-group/simple-form-group.component.ts
@@ -113,11 +109,9 @@ type ProfileForm = {
 };
 ```
 
-
 Notice that we are also taking advantage of the strictly typed forms feature, which is introduced in Angular 14.
 
 In the above code, we are simply creating a `FormGroup` with all the fields as [`FormControl`](https://angular.io/api/forms/FormControl). The HTML template code can look like below:
-
 
 ```html
 <!-- src/app/simple-form-group/simple-form-group.component.html -->
@@ -256,9 +250,7 @@ In the above code, we are simply creating a `FormGroup` with all the fields as [
 </form>
 ```
 
-
 The `formControlName` input provided by the [`FormControlName`](https://angular.io/api/forms/FormControlName) directive binds each individual input to the form control defined in `FormGroup`. The form controls communicate with their respective elements. They also communicate changes to the form group instance, which provides the source of truth for the model value.
-
 
 ### Pros
 
@@ -318,9 +310,7 @@ type AddressForm = {
 };
 ```
 
-
 Notice that now in `profileForm` address related fields are grouped in `address` element. We also created a `AddressForm` type to get better type safety, and better autocomplete in IDEs. Let’s group group nested form in the template:
-
 
 ```html
 <!-- src/app/nested-from-group/nested-form-group.component.html -->
@@ -354,17 +344,12 @@ Notice that now in `profileForm` address related fields are grouped in `address`
 </form>
 ```
 
-
 We added the [`formGroupName`](https://angular.io/api/forms/FormGroupName) directive to indicate that children form controls are part of `address` form-group.
-
 
 ### Pros
 
-
-
 1. Easy to create and maintain complex form models
 2. Logical segregation is present between set of fields
-
 
 ### Cons
 
@@ -373,7 +358,6 @@ We added the [`formGroupName`](https://angular.io/api/forms/FormGroupName) direc
 ## How to use child component with nested form-group
 
 In the previous section, we achieved logical separation in class, but our template is still complex. We will create another component to handle template complexity.
-
 
 ```typescript
 // src/app/nested-form-group-child/address-form/address-form.component.ts
@@ -392,9 +376,7 @@ export class AddressFormComponent {
 }
 ```
 
-
 We created `AddressFormComponent`. It has an input property called `formGroup`, through which parent components can pass the form-group. Let’s take a look at template:
-
 
 ```html
 <!-- src/app/nested-form-group-child/address-form/address-form.component.html -->
@@ -420,9 +402,7 @@ We created `AddressFormComponent`. It has an input property called `formGroup`, 
 </div>
 ```
 
-
 The template is pretty simple, it just has the address related fields. And below is how we would use it in parent component:
-
 
 ```html
 <!-- src/app/nested-form-group-child/nested-form-group-child.component.html -->
@@ -439,9 +419,7 @@ The template is pretty simple, it just has the address related fields. And below
 </form>
 ```
 
-
 And in the class, we would get the address form-group like below:
-
 
 ```typescript
 // src/app/nested-from-group/nested-from-group.component.ts
@@ -450,7 +428,9 @@ And in the class, we would get the address form-group like below:
   // ...
 })
 export class NestedFormGroupChildComponent {
-  profileFormGroup = new FormGroup<ProfileForm>({ /*...*/ });
+  profileFormGroup = new FormGroup<ProfileForm>({
+    /*...*/
+  });
 
   get addressFormGroup() {
     return this.profileFormGroup.get("address") as FormGroup;
@@ -458,25 +438,21 @@ export class NestedFormGroupChildComponent {
 }
 ```
 
-
-
 ### Pros
 
 1. Simpler templates
-    a. With this approach now we can handle everything related to address in `AddressFormComponent` so that our main component is much simpler to handle.
+   a. With this approach now we can handle everything related to address in `AddressFormComponent` so that our main component is much simpler to handle.
 
 ### Cons
 
 1. Not completely re-usable
-    a. If you want to use this component as a stand-alone form component, it’s not possible for now
-
+   a. If you want to use this component as a stand-alone form component, it’s not possible for now
 
 ## How to create reusable form with Composite `ControlValueAccessor`
 
 In this section we will learn how to create a completely reusable form, that can be used as both, inside other forms and as a stand-alone form. And the technique which we are going to use is called “Composite ControlValueAccessor”, referred from [Kara Erickson in AngularConnect 2017](https://youtu.be/CD_t3m2WMM8?t=1523).
 
 Our goal is to use the address form something like below:
-
 
 ```html
 <!-- src/app/reusable-form/reusable-form-wrapper/reusable-form-wrapper.component.html -->
@@ -486,8 +462,6 @@ Our goal is to use the address form something like below:
   <app-reusable-form formControlName="address"></app-reusable-form>
 </form>
 ```
-
-
 
 ### ControlValueAccessor
 
@@ -505,18 +479,15 @@ _From [Never again be confused when implementing ControlValueAccessor in Angular
 
 To learn more about `ControlValueAccessor`, you can read this [indepth guide](https://indepth.dev/posts/1055/never-again-be-confused-when-implementing-controlvalueaccessor-in-angular-forms). If you are looking for a practical example, you can refer to my earlier [article about date input](https://indepth.dev/posts/1467/how-to-use-controlvalueaccessor-to-enhance-date-input-with-automatic-conversion-and-validation) and [tutorial about managing object in form-control](https://indepth.dev/tutorials/angular/object-in-formcontrol).
 
-
 ### Composite ControlValueAccessors
 
 In earlier articles and tutorials, we saw usage of `ControlValueAccessor` with one `&lt;input>`. But, the advantage of using `ControlValueAccessor` is you can have more inputs with it if you want.
 
 We just need to handle all 4 required methods of that interface and it will just work, no matter how we handle it internally.
 
-
 ### Reusable Form
 
 One thing from previous section is clear, we want to use the same template and internally, we will manage the fields’ states with a form-group, so our template will look like below:
-
 
 ```html
 <!-- src/app/reusable-form/reusable-form.component.html -->
@@ -541,9 +512,7 @@ One thing from previous section is clear, we want to use the same template and i
 </div>
 ```
 
-
 To manage the address object, we will create a class. This will be used in later stage in class of above template:
-
 
 ```typescript
 // src/app/reusable-form/address.ts
@@ -566,13 +535,11 @@ export class Address {
 }
 ```
 
-
 We will have the above `Address` class as value for the form. Just like `string`, `number` and `boolean`, we can also have object stored in form-control. You can read more about it at the tutorial[ about managing object in form-control](https://indepth.dev/tutorials/angular/object-in-formcontrol).
 
 And for validation, you can have your own logic to validate the address, but for now we will keep it simple. We will use this when we implement validation.
 
 Next, based on previous articles about `ControlValueAccessor`, we will start with implementing `ControlValueAccessor` interface and the `NG_VALUE_ACCESSOR` as provider:
-
 
 ```typescript
 // src/app/reusable-form/reusable-form.component.ts
@@ -607,10 +574,7 @@ export class ReusableFormComponent implements ControlValueAccessor {
 }
 ```
 
-
-
 #### writeValue
-
 
 ```typescript
 // src/app/reusable-form/reusable-form.component.ts
@@ -632,12 +596,9 @@ export class ReusableFormComponent implements ControlValueAccessor {
   }
 ```
 
-
 In this, we will first convert the value coming in to the instance of `Address` and then, will call `form.patchValue` and it will update all the fields, of which values are updated.
 
-
 #### registerOnChange
-
 
 ```typescript
 // src/app/reusable-form/reusable-form.component.ts
@@ -650,11 +611,9 @@ registerOnChange(fn: (val: Partial<Address> | null) => void): void {
   }
 ```
 
-
 We are using `valueChanges` observable to handle `registerOnChange`. `valueChanges` observable emits for all the child form-fields, so it is a perfect fit for `registerOnChange`.
 
 Now, as we are listening for `valueChanges`, we will have to revisit and fix `writeValue`’s `patchValue`, because everytime `patchValue` is called, `valueChanges` will trigger, we don’t want that.
-
 
 ```typescript
 // src/app/reusable-form/reusable-form.component.ts
@@ -665,12 +624,9 @@ Now, as we are listening for `valueChanges`, we will have to revisit and fix `wr
   }
 ```
 
-
 As you notice above, we are setting `emitEvent` to `false`, so that it doesn’t trigger `valueChanges`.
 
-
 #### registerOnTouched
-
 
 ```typescript
 // src/app/reusable-form/reusable-form.component.ts
@@ -682,9 +638,7 @@ registerOnTouched(fn: () => void): void {
   }
 ```
 
-
 We want the form to be touched, anytime any child form-control is touched. So, we will call `onTouched` in the template as well, with all child form-controls:
-
 
 ```html
 <!-- src/app/reusable-form/reusable-form.component.html -->
@@ -693,18 +647,13 @@ We want the form to be touched, anytime any child form-control is touched. So, w
   <div>
     <label for="line1">Line 1*</label>
     <!-- removed other attributes/properties for brevity -->
-    <input
-      (blur)="onTouched()"
-    />
+    <input (blur)="onTouched()" />
   </div>
   <!-- other address fields -->
 </div>
 ```
 
-
-
 #### setDisabledState
-
 
 ```typescript
 // src/app/reusable-form/reusable-form.component.ts
@@ -714,12 +663,9 @@ setDisabledState(disabled: boolean) {
   }
 ```
 
-
-
 ### Validation
 
 To handle validation, we will first add provider, and implement the `Validator` interface:
-
 
 ```typescript
 // src/app/reusable-form/reusable-form.component.ts
@@ -736,16 +682,12 @@ To handle validation, we will first add provider, and implement the `Validator` 
   ],
 })
 export class ReusableFormComponent implements ControlValueAccessor, Validator {
-
   // ...
   validate(control: AbstractControl<Address>): ValidationErrors | null {}
 }
 ```
 
-
-
 #### validate
-
 
 ```typescript
 // src/app/reusable-form/reusable-form.component.ts
@@ -756,16 +698,13 @@ validate(control: AbstractControl<Address>): ValidationErrors | null {
   }
 ```
 
-
 Here we are going to use the `Address` class’s `isValid` method and based on that we will return the error.
-
 
 ### Multiple instances
 
 Although our form is ready now to be used, there is still one issue with it. If this component is being used within the same UI, then the form controls may not work properly, because they all will have have same `name` and `id` attributes. And, this component itself doesn’t have `id`, which can be helpful for testing.
 
 To fix this, first let’s introduce an [`host`](https://angular.io/api/core/Directive#host) property called `id`:
-
 
 ```typescript
 // src/app/reusable-form/reusable-form.component.ts
@@ -781,9 +720,7 @@ export class ReusableFormComponent {
 }
 ```
 
-
 Next, we will add a static counter, which we will increment with each instance of this component:
-
 
 ```typescript
 // src/app/reusable-form/reusable-form.component.ts
@@ -792,16 +729,12 @@ Next, we will add a static counter, which we will increment with each instance o
   // ...
 })
 export class ReusableFormComponent {
-
   static nextId = 0;
   id = `address-input-${ReusableFormComponent.nextId++}`;
-
 }
 ```
 
-
 And lastly, we will use this `id` with all `input`s’ `id` and `name` attributes. And also in their `&lt;label>`s’ `for` attribute:
-
 
 ```html
 <!-- src/app/reusable-form/reusable-form.component.html -->
@@ -810,18 +743,13 @@ And lastly, we will use this `id` with all `input`s’ `id` and `name` attribute
   <div>
     <label [htmlFor]="id + '-line1'">Line 1*</label>
     <!-- other attributes removed for brevity -->
-    <input
-      [id]="id + '-line1'"
-      [name]="id + '-line1'"
-    />
+    <input [id]="id + '-line1'" [name]="id + '-line1'" />
   </div>
   <!-- other address fields -->
 </div>
 ```
 
-
 With this, our completely reusable address form is ready.
-
 
 ## Conclusion
 
