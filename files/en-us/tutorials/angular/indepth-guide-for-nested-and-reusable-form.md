@@ -29,7 +29,11 @@ Forms typically contain several related controls. [Reactive forms](https://angul
 
 Just as a form control instance gives you control over a single input field, a form group instance tracks the form state of a group of form control instances (for example, a form). Each control in a form group instance is tracked by name when creating the form group.
 
-We will take an example of Profile form, which will have input fields for name, email, address lines, city, state, zip-code and country. The form-group for the same looks like below:
+We will take an example of Profile form, which will have input fields for name, email, address lines, city, state, zip-code and country.
+
+![profile form](https://i.imgur.com/NBmJUwT.png "profile form")
+
+The form-group for the same looks like below:
 
 ```typescript
 // src/app/simple-form-group/simple-form-group.component.ts
@@ -39,7 +43,7 @@ We will take an example of Profile form, which will have input fields for name, 
   templateUrl: "simple-form-group.component.html",
 })
 export class SimpleFormGroupComponent {
-  profileFormGroup = new FormGroup<ProfileForm>({
+  profileFormGroup = new FormGroup<SimpleProfileForm>({
     name: new FormControl("", {
       validators: [Validators.required],
       nonNullable: true,
@@ -52,23 +56,7 @@ export class SimpleFormGroupComponent {
       validators: [Validators.required],
       nonNullable: true,
     }),
-    line2: new FormControl(""),
-    city: new FormControl("", {
-      validators: [Validators.required],
-      nonNullable: true,
-    }),
-    state: new FormControl("", {
-      validators: [Validators.required],
-      nonNullable: true,
-    }),
-    zipCode: new FormControl("", {
-      validators: [Validators.required],
-      nonNullable: true,
-    }),
-    country: new FormControl("", {
-      validators: [Validators.required],
-      nonNullable: true,
-    }),
+    // other address form controls
   });
 
   readonly COUNTRIES = COUNTRIES;
@@ -83,21 +71,10 @@ export class SimpleFormGroupComponent {
   get line1FC() {
     return this.profileFormGroup.get("line1");
   }
-  get cityFC() {
-    return this.profileFormGroup.get("city");
-  }
-  get stateFC() {
-    return this.profileFormGroup.get("state");
-  }
-  get zipCodeFC() {
-    return this.profileFormGroup.get("zipCode");
-  }
-  get countryFC() {
-    return this.profileFormGroup.get("country");
-  }
+  // other form-control getters
 }
 
-type ProfileForm = {
+export type SimpleProfileForm = {
   name: FormControl<string>;
   email: FormControl<string>;
   line1: FormControl<string>;
@@ -109,7 +86,7 @@ type ProfileForm = {
 };
 ```
 
-Notice that we are also taking advantage of the strictly typed forms feature, which is introduced in Angular 14.
+Notice that we are also taking advantage of the strictly typed forms feature, [which is introduced in Angular 14](https://github.com/angular/angular/pull/43834).
 
 In the above code, we are simply creating a `FormGroup` with all the fields as [`FormControl`](https://angular.io/api/forms/FormControl). The HTML template code can look like below:
 
@@ -131,18 +108,7 @@ In the above code, we are simply creating a `FormGroup` with all the fields as [
     />
     <div class="invalid-feedback">Name is required</div>
   </div>
-  <div>
-    <label for="email">Email*</label>
-    <input
-      type="email"
-      formControlName="email"
-      id="email"
-      [ngClass]="{
-        'is-invalid': emailFC?.invalid && (emailFC?.touched || emailFC?.dirty)
-      }"
-    />
-    <div class="invalid-feedback">Please enter valid email</div>
-  </div>
+  <!-- other basic information fields -->
   <div>
     <h2>Address</h2>
     <div>
@@ -160,89 +126,7 @@ In the above code, we are simply creating a `FormGroup` with all the fields as [
       />
       <div class="invalid-feedback">Address line 1 is required</div>
     </div>
-    <div>
-      <label for="line2">Line 2</label>
-      <input
-        [id]="'line2'"
-        [name]="'line2'"
-        autocomplete="address-line2"
-        formControlName="line2"
-        type="text"
-      />
-    </div>
-    <div>
-      <label for="city">City*</label>
-      <input
-        [id]="'city'"
-        [name]="'city'"
-        autocomplete="address-level2"
-        formControlName="city"
-        required
-        type="text"
-        [ngClass]="{
-          'is-invalid': cityFC?.invalid && (cityFC?.touched || cityFC?.dirty)
-        }"
-      />
-      <div class="invalid-feedback">City is required</div>
-    </div>
-    <div>
-      <label for="state">State*</label>
-      <select
-        [id]="'state'"
-        [name]="'state'"
-        autocomplete="address-level1"
-        formControlName="state"
-        required
-        type="text"
-        [ngClass]="{
-          'is-invalid': stateFC?.invalid && (stateFC?.touched || stateFC?.dirty)
-        }"
-      >
-        <option selected disabled value="">Choose...</option>
-        <option>...</option>
-      </select>
-      <div class="invalid-feedback">State is required</div>
-    </div>
-    <div>
-      <label for="zip">Zip*</label>
-      <input
-        [id]="'zipCode'"
-        [name]="'zipCode'"
-        autocomplete="postal-code"
-        formControlName="zipCode"
-        required
-        type="text"
-        [ngClass]="{
-          'is-invalid':
-            zipCodeFC?.invalid && (zipCodeFC?.touched || zipCodeFC?.dirty)
-        }"
-      />
-      <div class="invalid-feedback">Zip code is required</div>
-    </div>
-    <div>
-      <label for="country">Country*</label>
-      <select
-        [id]="'country'"
-        [name]="'country'"
-        autocomplete="country"
-        formControlName="country"
-        required
-        type="text"
-        [ngClass]="{
-          'is-invalid':
-            countryFC?.invalid && (countryFC?.touched || countryFC?.dirty)
-        }"
-      >
-        <option selected disabled value="">Choose...</option>
-        <option
-          *ngFor="let country of COUNTRIES"
-          [value]="country.code.toUpperCase()"
-        >
-          {{ country.name }}
-        </option>
-      </select>
-      <div class="invalid-feedback">Country is required</div>
-    </div>
+    <!-- other address fields -->
   </div>
   <button type="submit" [disabled]="profileFormGroup.invalid">
     Submit form
@@ -428,9 +312,7 @@ And in the class, we would get the address form-group like below:
   // ...
 })
 export class NestedFormGroupChildComponent {
-  profileFormGroup = new FormGroup<ProfileForm>({
-    /*...*/
-  });
+  profileFormGroup = new FormGroup<ProfileForm>({ /*...*/ });
 
   get addressFormGroup() {
     return this.profileFormGroup.get("address") as FormGroup;
@@ -449,6 +331,13 @@ export class NestedFormGroupChildComponent {
    a. If you want to use this component as a stand-alone form component, it’s not possible for now
 
 ## How to create reusable form with Composite `ControlValueAccessor`
+
+In the previous section, we created a component and moved the address form’s template into it. But, it’s still not completely re-suable. By completely re-usable what I mean is:
+
+1. The logic, error handling and address form creation should be part of address-component and not the parent component
+2. The component should be usable inside any form
+3. The component should be usable with both, template driven and reactive forms
+4. The component should support native form-control features, so that the parent or consumer component can take advantage of that, for example showing errors if overall address-form is invalid
 
 In this section we will learn how to create a completely reusable form, that can be used as both, inside other forms and as a stand-alone form. And the technique which we are going to use is called “Composite ControlValueAccessor”, referred from [Kara Erickson in AngularConnect 2017](https://youtu.be/CD_t3m2WMM8?t=1523).
 
@@ -647,7 +536,9 @@ We want the form to be touched, anytime any child form-control is touched. So, w
   <div>
     <label for="line1">Line 1*</label>
     <!-- removed other attributes/properties for brevity -->
-    <input (blur)="onTouched()" />
+    <input
+      (blur)="onTouched()"
+    />
   </div>
   <!-- other address fields -->
 </div>
@@ -682,6 +573,7 @@ To handle validation, we will first add provider, and implement the `Validator` 
   ],
 })
 export class ReusableFormComponent implements ControlValueAccessor, Validator {
+
   // ...
   validate(control: AbstractControl<Address>): ValidationErrors | null {}
 }
@@ -729,8 +621,10 @@ Next, we will add a static counter, which we will increment with each instance o
   // ...
 })
 export class ReusableFormComponent {
+
   static nextId = 0;
   id = `address-input-${ReusableFormComponent.nextId++}`;
+
 }
 ```
 
@@ -743,7 +637,10 @@ And lastly, we will use this `id` with all `input`s’ `id` and `name` attribute
   <div>
     <label [htmlFor]="id + '-line1'">Line 1*</label>
     <!-- other attributes removed for brevity -->
-    <input [id]="id + '-line1'" [name]="id + '-line1'" />
+    <input
+      [id]="id + '-line1'"
+      [name]="id + '-line1'"
+    />
   </div>
   <!-- other address fields -->
 </div>
