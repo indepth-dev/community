@@ -136,11 +136,11 @@ In the above code, we are simply creating a `FormGroup` with all the fields as [
 
 The `formControlName` input provided by the [`FormControlName`](https://angular.io/api/forms/FormControlName) directive binds each individual input to the form control defined in `FormGroup`. The form controls communicate with their respective elements. They also communicate changes to the form group instance, which provides the source of truth for the model value.
 
-### Pros
+**Pros**
 
 1. Simple and straight-forward template and form-group
 
-### Cons
+**Cons**
 
 1. Difficult to create and maintain complex form models
 2. Logical segregation is missing between set of fields
@@ -230,12 +230,12 @@ Notice that now in `profileForm` address related fields are grouped in `address`
 
 We added the [`formGroupName`](https://angular.io/api/forms/FormGroupName) directive to indicate that children form controls are part of `address` form-group.
 
-### Pros
+**Pros**
 
 1. Easy to create and maintain complex form models
 2. Logical segregation is present between set of fields
 
-### Cons
+**Cons**
 
 1. Larger template due to more fields and complex form
 
@@ -320,12 +320,12 @@ export class NestedFormGroupChildComponent {
 }
 ```
 
-### Pros
+**Pros**
 
 1. Simpler templates
    a. With this approach now we can handle everything related to address in `AddressFormComponent` so that our main component is much simpler to handle.
 
-### Cons
+**Cons**
 
 1. Not completely re-usable
    a. If you want to use this component as a stand-alone form component, it’s not possible for now
