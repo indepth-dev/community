@@ -43,7 +43,7 @@ The route from above can point to a component that displays a profile and to do 
 
 Here is what the concept could look like:
 
-[https://i.imgur.com/vXIngo2.mp4](https://i.imgur.com/vXIngo2.mp4)
+![https://s4.gifyu.com/images/ezgif.com-gif-maker20b1fec6d7d30b73.gif](https://s4.gifyu.com/images/ezgif.com-gif-maker20b1fec6d7d30b73.gif)
 
 In such cases, it’s usually preferred to use the required parameter which can uniquely reference the object we want to get. In our example, we can use profile id `152` to fetch the complete profile object using that specific id.
 
@@ -218,7 +218,7 @@ In this guide, we will implement a feature to display information about previous
 
 The concept of the last visited profile feature is presented in the gif below:
 
-[https://i.imgur.com/STxZuzQ.mp4](https://i.imgur.com/STxZuzQ.mp4)
+![https://s4.gifyu.com/images/ezgif.com-gif-maker-293547bb85971550b.gif](https://s4.gifyu.com/images/ezgif.com-gif-maker-293547bb85971550b.gif)
 
 Although in our guide we will use query params to store a single value, keep in mind that we can assign multiple query params and each of them can store not only a single string, but also an array or even an object if we handle the encoding - more about that in the “In-depth bits” section.
 
