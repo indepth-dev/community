@@ -27,3 +27,4 @@ title: Angular Tutorials | indepth.dev
 21. [InDepth guide to passing data via routing](/tutorials/angular/indepth-guide-to-passing-data-via-routing)
 22. [InDepth guide for creating nested and reusable forms](/tutorials/angular/indepth-guide-for-nested-and-reusable-form)
 23. [InDepth guide on how to customize styles in the AgGrid in Angular](/tutorials/angular/indepth-guide-ag-grid-styles-customization)
+24. [InDepth guide to passing parameters via routing in Angular](/tutorials/angular/indepth-guide-to-passing-parameters-via-routing)
