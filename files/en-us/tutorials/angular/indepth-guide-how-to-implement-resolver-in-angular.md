@@ -87,9 +87,8 @@ export class ContactsResolver implements Resolve<UserContacts[]> {
     constructor() {}
 
     resolve(route: ActivatedRouteSnapshot): Observable<UserContacts[]> {
-        // We just mock user information in the resolver for avoiding complications.
-        // Usually you use services in Angular for that
-        //By the way, we used a delay operator to simulate asynchronous HTTP requests from the service.
+        // We just mock user information in the resolver used a delay operator
+        // to simulate asynchronous HTTP requests from the service.
         return of(userContactsMock).pipe(delay(1000));
     }
 }
@@ -269,14 +268,14 @@ resolve( route: ActivatedRouteSnapshot, state: RouterStateSnapshot): Observable<
     }
 }
 ```
-Now take a minute and think about What will happen next if UserResolver returns the error?
+Now take a minute and think about What will happen next if `UserResolver` returns the error?
 
-a) UserResolver executes but the page with user contacts will not render/navigate.
+a) `UserResolver` executes but the page with user contacts will not render/navigate.
 
-b) UserResolver executes and navigates to the user contacts page.
+b) `UserResolver` executes and navigates to the user contacts page.
 
-The correct answer b - UserResolver executes but the page with user contacts will not render/navigate.
-It happened because Observable from the service returns the error(in another case it could be never complete) then you won’t be able to navigate to the page. 
+The correct answer b - `UserResolver` executes but the page with user contacts will not render/navigate.
+It happened because `Observable` from the service returns the error(in another case it could be never complete) then you won’t be able to navigate to the page. 
 In other words, the route will not resolve and your page will not render.
 
 To understand more details you can activate tracing support by passing a flag when it’s added to the app routes, like so:
@@ -453,7 +452,7 @@ This case is pretty popular for components with similar functionality. You can c
 
 In this tutorial, we learned how to fetch data during the page navigation in Angular using Resolvers. The data is fetched before Angular’s router initializes the component defined for the router. We also consider the execution process of the Resolver and investigate the question of canceling navigation.
 
-So, before thinking about the implementation of Resolver we need to consider the main requirements of the task. Here’s what you need to keep in mind deciding to use Resolvers:
+So, before thinking about the implementation of `Resolver` we need to consider the main requirements of the task. Here’s what you need to keep in mind deciding to use Resolvers:
 
 - You should create a Resolver when the data is critical for the component view.
 - You should use resolvers for operations that are predictably fast – so your users don't need to wait.
