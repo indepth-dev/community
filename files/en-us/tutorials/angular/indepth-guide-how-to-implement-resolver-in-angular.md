@@ -28,7 +28,7 @@ In this tutorial, we will look at the second case in the list - preloading data 
 
 Let's start.
 
-### Use case:
+**Use case**
 
 1. Let's imagine the task where you need to implement the page with a navigation list of three users.
 
