@@ -29,3 +29,4 @@ title: Angular Tutorials | indepth.dev
 23. [InDepth guide on how to customize styles in the AgGrid in Angular](/tutorials/angular/indepth-guide-ag-grid-styles-customization)
 24. [InDepth guide to passing parameters via routing in Angular](/tutorials/angular/indepth-guide-to-passing-parameters-via-routing)
 25. [InDepth guide on how to implement Resolver in Angular](/tutorials/angular/indepth-guide-how-to-implement-resolver-in-angular)
+26. [Creating a custom form field control group using Angular Material](/tutorials/angular/reusable-form-angular-material.md)
