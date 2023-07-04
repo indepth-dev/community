@@ -2,7 +2,7 @@
 title: Creating a custom form field control group using Angular Material - Angular Tutorials | indepth.dev
 author_name: Dharmen Shah
 author_link: https://twitter.com/shhdharmen
-discussion_link: TBA
+discussion_link: https://github.com/indepth-dev/community/discussions/303
 display_name: Creating a custom form field control group using Angular Material
 ---
 
