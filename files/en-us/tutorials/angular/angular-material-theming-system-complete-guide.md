@@ -10,6 +10,8 @@ display_name: Angular Material Theming System - Complete Guide
 
 > In the latest releases of Angular Material, the SASS theming API has been reworked. In this article, we will learn about custom themes, modifying typography and much more using new SASS mixins.
 
+## This guide is written for Angular Material version 13. I am soon going to launch an article series for latest versions. [Learn more](https://angular-material.dev/launch)
+
 In this article, you will learn what Angular Material Theming is and what are some recent changes to adhere to the new module system of SASS.
 
 Then, we will set up a project with Angular Material. We will then add a custom theme in it and understand some important mixins, `core`, `define-palette`, `define-light-theme` and we will apply custom theme to Angular Material components. And we will also learn how to use a pre-built theme.
